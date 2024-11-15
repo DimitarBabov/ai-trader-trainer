@@ -154,10 +154,10 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-.csv
-.png
-data_csv/
-data_processed_imgs/
+*.csv
+*.png
+#data_csv/
+#data_processed_imgs/
 
 
 # PyCharm
