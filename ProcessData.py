@@ -14,49 +14,45 @@ def price_to_pixel(value, min_price, max_price, height):
     """Convert a price to a pixel position based on image height and price range."""
     scale = (max_price - min_price) / (height - 1)
     return height - int((value - min_price) / scale) - 1
-
-def create_candlestick_image(data, height=224, candlestick_width=3, spacing=1, min_alpha=64, blur=False):
-    """Create a candlestick image with 3-pixel wide candlesticks and 1-pixel spacing between each."""
+def create_candlestick_image(data, height=224, candlestick_width=3, spacing=1, blur=False):
+    """Create a candlestick image with all candles rendered in white."""
     num_candlesticks = len(data)
     min_price = data[['Low']].min().min()
     max_price = data[['High']].max().max()
-    min_volume = data['Volume'].min()
-    max_volume = data['Volume'].max()
-    
-    # Calculate total width: (candlestick width + spacing) * num_candlesticks
     total_width = (candlestick_width + spacing) * num_candlesticks
-    background_color = 0  # Black background for grayscale
-    combined_image = Image.new('L', (total_width, height), background_color)  # Grayscale image
+    
+    # Render the image in grayscale mode ('L') with black background
+    combined_image = Image.new('L', (total_width, height), 0)  # Black background
     draw = ImageDraw.Draw(combined_image)
 
-    for i, (_, row) in enumerate(data.iterrows()):
-        open_price, high_price, low_price, close_price, volume = row['Open'], row['High'], row['Low'], row['Close'], row['Volume']
+    for i, (index, row) in enumerate(data.iterrows()):
+        open_price, high_price, low_price, close_price = row['Open'], row['High'], row['Low'], row['Close']
         
-        # Set color to white with transparency based on volume
-        alpha = int(min_alpha + (volume - min_volume) / (max_volume - min_volume) * (255 - min_alpha))
-        color = alpha  # Grayscale value
-
         # Convert prices to pixel positions
         open_pixel = price_to_pixel(open_price, min_price, max_price, height)
         close_pixel = price_to_pixel(close_price, min_price, max_price, height)
         high_pixel = price_to_pixel(high_price, min_price, max_price, height)
         low_pixel = price_to_pixel(low_price, min_price, max_price, height)
         
-        # Calculate the x position for this candlestick with spacing
+        # Candle color: white (255 in grayscale)
+        color = 255
+        
+        # Calculate x position
         x_start = i * (candlestick_width + spacing)
-
-        # Draw the high-low wick on the central pixel of the candlestick width
-        wick_x = x_start + 1  # Center of 3-pixel candlestick
+        
+        # Draw wick
+        wick_x = x_start + candlestick_width // 2
         draw.line((wick_x, high_pixel, wick_x, low_pixel), fill=color)
         
-        # Draw the candlestick body (open to close) across the 3-pixel width
+        # Draw body
         draw.rectangle([x_start, min(open_pixel, close_pixel), x_start + candlestick_width - 1, max(open_pixel, close_pixel)], fill=color)
 
     if blur:
-        # Apply Gaussian blur to simulate natural mammalian vision blur
-        combined_image = combined_image.filter(ImageFilter.GaussianBlur(radius=0.5))
+        # Apply Gaussian blur
+        combined_image = combined_image.filter(ImageFilter.GaussianBlur(radius=blur_radius))
 
     return combined_image
+
 
 def save_candlestick_image(image, ticker, timeframe, window_size, end_date, output_folder):
     """Save the candlestick image with a filename based on the ticker, timeframe, window size, and end date."""
@@ -65,7 +61,7 @@ def save_candlestick_image(image, ticker, timeframe, window_size, end_date, outp
     image.save(filepath)
     print(f"Saved: {filepath}")
 
-def process_data_into_images(csv_file, ticker, timeframe, window_size=56, height=224, output_folder='output_images', overlap=23, min_alpha=64, blur=False):
+def process_data_into_images(csv_file, ticker, timeframe, window_size=56, height=224, output_folder='output_images', overlap=23,  blur=False, color_candles = False):
     """Process all data in the CSV file into candlestick images with specified window size and overlap."""
     data = load_data(csv_file)
     
@@ -80,7 +76,7 @@ def process_data_into_images(csv_file, ticker, timeframe, window_size=56, height
         window_data = data.iloc[i:i + window_size]
         end_date = window_data.index[-1].strftime('%Y-%m-%d')
         
-        image = create_candlestick_image(window_data, height=height, candlestick_width=3, spacing=1, min_alpha=min_alpha, blur=blur)
+        image = create_candlestick_image(window_data, height=height, candlestick_width=3, spacing=1, blur=blur)
         save_candlestick_image(image, ticker, timeframe, window_size, end_date, output_folder)
 
 if __name__ == "__main__":
@@ -104,11 +100,11 @@ if __name__ == "__main__":
     
     # Parameters for processing
     output_folder = os.path.join('data_processed_imgs', ticker, timeframe)
-    window_size = 56             # Number of candlesticks per image
-    height = 224                 # Image height in pixels
-    overlap = 20                 # Number of overlapping candlesticks between consecutive windows
-    min_alpha = 64               # Minimum alpha value for lowest volume candlestick
+    window_size = 32             # Number of candlesticks per image
+    height = 128                 # Image height in pixels
+    overlap = 31              # Number of overlapping candlesticks between consecutive windows    
     blur = False                  # Apply blur for natural mammalian vision effect
+    blur_radius = 1
 
     # Process the data and generate images
-    process_data_into_images(csv_file, ticker, timeframe, window_size, height, output_folder, overlap, min_alpha, blur)
+    process_data_into_images(csv_file, ticker, timeframe, window_size, height, output_folder, overlap,blur)
