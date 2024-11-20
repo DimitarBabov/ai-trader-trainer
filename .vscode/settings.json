@@ -1,5 +1,6 @@
 {
     "python.analysis.extraPaths": [
-        "./CNN/configs"
+        "./CNN/configs",
+        "./PreProcessData"
     ]
 }
