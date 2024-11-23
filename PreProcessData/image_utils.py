@@ -138,4 +138,4 @@ def create_candlestick_with_regression_image(data, height=224, candlestick_width
         # Apply Gaussian blur
         mage = image.filter(ImageFilter.GaussianBlur(radius=blur_radius))
 
-    return image, slope_first, slope_second, slope_last, std_dev
+    return image, slope_first, slope_second, slope_last, slope, std_dev
