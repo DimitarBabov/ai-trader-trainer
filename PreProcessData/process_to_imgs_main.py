@@ -30,7 +30,7 @@ def process_data_into_images(csv_file, ticker, timeframe, window_size=56, height
         window_data = data.iloc[i:i + window_size]
         #end_date = window_data.index[-1].strftime('%Y-%m-%d')
         end_date = window_data.index[-1].strftime('%Y-%m-%d %H-%M-%S')  # Adjust format for hourly data
-        image, slope_first, slope_second, slope_third,slope_whole, std = create_candlestick_with_regression_image(window_data, height=height, candlestick_width=3, spacing=1, blur=blur, draw_regression_lines=draw_regression_lines)
+        image, slope_first, slope_second, slope_third,slope_whole, std, colored_pixels_ratio, price_change, max_dev_scaled = create_candlestick_with_regression_image(window_data, height=height, candlestick_width=3, spacing=1, blur=blur, draw_regression_lines=draw_regression_lines)
         filename = save_candlestick_image(image, ticker, timeframe, window_size, end_date, output_folder)
 
         # Save the regression slopes for this image
@@ -39,7 +39,10 @@ def process_data_into_images(csv_file, ticker, timeframe, window_size=56, height
             "slope_second": slope_second,
             "slope_third": slope_third,
             "slope_whole":slope_whole,
-            "std_dev":std
+            "std_dev":std,
+            "max_dev":max_dev_scaled,
+            "colored_pixels_ratio":colored_pixels_ratio,
+            "price_change":price_change
         }
 
     # Save the regression data to a JSON file
@@ -78,7 +81,7 @@ if __name__ == "__main__":
     overlap = 15                # Number of overlapping candlesticks between consecutive windows    
     blur = False                 # Apply blur for natural mammalian vision effect
     blur_radius = 1
-    draw_regression_lines = False
+    draw_regression_lines = True
 
     # Process the data and generate images
-    process_data_into_images(csv_file, ticker, timeframe, window_size, height, output_folder, regression_folder, overlap, blur, draw_regression_lines)
+    process_data_into_images(csv_file, ticker, timeframe, window_size, height, output_folder, regression_folder, overlap, blur,blur_radius, draw_regression_lines)
