@@ -81,7 +81,7 @@ if __name__ == "__main__":
     overlap = 15                # Number of overlapping candlesticks between consecutive windows    
     blur = False                 # Apply blur for natural mammalian vision effect
     blur_radius = 1
-    draw_regression_lines = True
+    draw_regression_lines = False
 
     # Process the data and generate images
     process_data_into_images(csv_file, ticker, timeframe, window_size, height, output_folder, regression_folder, overlap, blur,blur_radius, draw_regression_lines)

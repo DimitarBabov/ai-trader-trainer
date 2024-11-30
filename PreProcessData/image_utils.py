@@ -7,8 +7,8 @@ def price_to_pixel(value, min_price, max_price, height):
     scale = (max_price - min_price) / (height - 1)
     return height - int((value - min_price) / scale) - 1
 
-def create_candlestick_with_regression_image(data, height=224, candlestick_width=3, spacing=1, blur=False, blur_radius=0, draw_regression_lines=True):
-    """Create a candlestick image with all candles rendered in white and draw regression lines below."""
+def create_candlestick_with_regression_image(data, height=224, candlestick_width=3, spacing=1, blur=False, blur_radius=0, draw_regression_lines=True, color_candles=True):
+    """Create a candlestick image with bull and bear candles in different colors, and draw regression lines below."""
     num_candlesticks = len(data)
     min_price = data[['Low']].min().min()
     max_price = data[['High']].max().max()
@@ -20,8 +20,8 @@ def create_candlestick_with_regression_image(data, height=224, candlestick_width
 
     total_width = (candlestick_width + spacing) * num_candlesticks
 
-    # Render the image in grayscale mode ('L') with black background
-    image = Image.new('L', (total_width, height), 0)  # Black background
+    # Render the image in RGB mode with black background
+    image = Image.new('RGB', (total_width, height), (0, 0, 0))  # Black background
     draw = ImageDraw.Draw(image)
 
     # Variable to accumulate the colored pixels (candlestick area)
@@ -37,8 +37,11 @@ def create_candlestick_with_regression_image(data, height=224, candlestick_width
         high_pixel = price_to_pixel(high_price, min_price, max_price, height)
         low_pixel = price_to_pixel(low_price, min_price, max_price, height)
 
-        # Candle color: white (255 in grayscale)
-        color = 255
+        # Determine candle color: green for bull (close > open), red for bear (close < open)
+        if color_candles:
+            color = (0, 255, 0) if close_price > open_price else (255, 0, 0)
+        else:
+            color = (255, 255, 255)  # White for all candles if color_candles is False
 
         # Calculate x position
         x_start = i * (candlestick_width + spacing)
@@ -87,9 +90,8 @@ def create_candlestick_with_regression_image(data, height=224, candlestick_width
     # Calculate the maximum deviation for parallel lines
     max_deviation = max(abs(y_values - regression_y))
 
-     # Scale max deviation to pixels
+    # Scale max deviation to pixels
     max_deviation_scaled = price_to_pixel(max_price - max_deviation, min_price, max_price, height) - price_to_pixel(max_price, min_price, max_price, height)
-
 
     # Create upper and lower regression lines
     upper_regression_line = regression_line + max_deviation
@@ -133,14 +135,14 @@ def create_candlestick_with_regression_image(data, height=224, candlestick_width
             y_pixel = normalize_y(y, min_price, max_price, height)
             x_pixel = (x // 4) * (candlestick_width + spacing) + (x % 4) * (candlestick_width + spacing) // 4
             if 0 <= y_pixel < height:
-                draw.point((x_pixel, y_pixel), fill=128)  # Draw in gray (128) for visibility
+                draw.point((x_pixel, y_pixel), fill=(128, 128, 128))  # Draw in gray (128) for visibility
         # Draw upper regression line
         for x in x_values:
             y = upper_regression_line(x)
             y_pixel = price_to_pixel(y, min_price, max_price, height)
             x_pixel = (x // 4) * (candlestick_width + spacing) + (x % 4) * (candlestick_width + spacing) // 4
             if 0 <= y_pixel < height:
-                draw.point((x_pixel, y_pixel), fill=200)
+                draw.point((x_pixel, y_pixel), fill=(200, 200, 200))
 
         # Draw lower regression line
         for x in x_values:
@@ -148,7 +150,7 @@ def create_candlestick_with_regression_image(data, height=224, candlestick_width
             y_pixel = price_to_pixel(y, min_price, max_price, height)
             x_pixel = (x // 4) * (candlestick_width + spacing) + (x % 4) * (candlestick_width + spacing) // 4
             if 0 <= y_pixel < height:
-                draw.point((x_pixel, y_pixel), fill=200)
+                draw.point((x_pixel, y_pixel), fill=(200, 200, 200))
 
         # Draw first regression line
         for x in x_values_first:
@@ -156,7 +158,7 @@ def create_candlestick_with_regression_image(data, height=224, candlestick_width
             y_pixel = normalize_y(y, min_y, max_y, height)
             x_pixel = (x // 4) * (candlestick_width + spacing) + (x % 4) * (candlestick_width + spacing) // 4
             if 0 <= y_pixel < height:
-                draw.point((x_pixel, y_pixel), fill=128)  # Draw in gray (128) for visibility
+                draw.point((x_pixel, y_pixel), fill=(128, 128, 128))  # Draw in gray (128) for visibility
 
         # Draw second regression line
         for x in x_values_second:
@@ -164,7 +166,7 @@ def create_candlestick_with_regression_image(data, height=224, candlestick_width
             y_pixel = normalize_y(y, min_y, max_y, height)
             x_pixel = (x // 4) * (candlestick_width + spacing) + (x % 4) * (candlestick_width + spacing) // 4
             if 0 <= y_pixel < height:
-                draw.point((x_pixel, y_pixel), fill=128)  # Draw in gray (128) for visibility
+                draw.point((x_pixel, y_pixel), fill=(128, 128, 128))  # Draw in gray (128) for visibility
 
         # Draw last 4 candles regression line
         for x in x_values_last:
@@ -172,7 +174,7 @@ def create_candlestick_with_regression_image(data, height=224, candlestick_width
             y_pixel = normalize_y(y, min_y, max_y, height)
             x_pixel = (x // 4) * (candlestick_width + spacing) + (x % 4) * (candlestick_width + spacing) // 4
             if 0 <= y_pixel < height:
-                draw.point((x_pixel, y_pixel), fill=200)  # Draw in light gray (200) for visibility
+                draw.point((x_pixel, y_pixel), fill=(200, 200, 200))  # Draw in light gray (200) for visibility
 
     if blur:
         # Apply Gaussian blur
