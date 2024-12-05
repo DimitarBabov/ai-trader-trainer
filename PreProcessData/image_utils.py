@@ -7,7 +7,7 @@ def price_to_pixel(value, min_price, max_price, height):
     scale = (max_price - min_price) / (height - 1)
     return height - int((value - min_price) / scale) - 1
 
-def create_candlestick_with_regression_image(data, height=224, candlestick_width=3, spacing=1, blur=False, blur_radius=0, draw_regression_lines=True, color_candles=True):
+def create_candlestick_with_regression_image(data, height=224, candlestick_width=3, spacing=0, blur=False, blur_radius = 1, draw_regression_lines=True, color_candles=True):
     """Create a candlestick image with bull and bear candles in different colors, and draw regression lines below."""
     num_candlesticks = len(data)
     min_price = data[['Low']].min().min()
