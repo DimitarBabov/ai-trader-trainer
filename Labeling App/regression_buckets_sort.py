@@ -26,14 +26,14 @@ def get_bucket_name(attributes):
     slope_conditions = [attributes.get(key, 0) > 0 for key in slope_keys]
     max_dev = attributes.get('max_dev', 0)
     if max_dev < 15:
-        max_dev_part = "maxdev_lt15"
+        max_dev_part = "dev_lt15"
     elif 15 <= max_dev <= 25:
-        max_dev_part = "maxdev_15to25"
+        max_dev_part = "dev_15to25"
     else:
-        max_dev_part = "maxdev_gt25"
+        max_dev_part = "dev_gt25"
     
     # Create a bucket identifier string, e.g., "pos_pos_neg_pos_maxdev_gt25"
-    slope_part = "_".join(["pos" if cond else "neg" for cond in slope_conditions])
+    slope_part = "_".join(["p" if cond else "n" for cond in slope_conditions])
     
     return f"{slope_part}_{max_dev_part}"
 
@@ -67,11 +67,9 @@ def sort_images_into_buckets(base_dir, data):
         for img in images:
             # Calculate trending value and add it before the extension
             attributes = data.get(img, {})
-            price_change = attributes.get('price_change', 0)
-            colored_pixels_ratio = attributes.get('colored_pixels_ratio', 1)  # Avoid division by zero
-            trending_value = price_change / colored_pixels_ratio
+            trending_value = attributes.get('trending', 0)
             img_name, img_ext = os.path.splitext(img)
-            updated_image_name = f"{img_name}_trending_{trending_value:.2f}{img_ext}"
+            updated_image_name = f"{img_name}_{trending_value:.2f}{img_ext}"
 
             src_image_path = os.path.join(base_dir, 'images', img)
             dst_image_path = os.path.join(bucket_folder, updated_image_name)

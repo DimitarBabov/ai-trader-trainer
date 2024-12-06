@@ -57,7 +57,8 @@ def process_data_into_images(csv_file, ticker, timeframe, window_size=56, height
             "std_dev":std,
             "max_dev":max_dev_scaled,
             "colored_pixels_ratio":colored_pixels_ratio,
-            "price_change":price_change
+            "price_change":price_change,
+            "trending":int(price_change/colored_pixels_ratio)
         }
 
     # Save the regression data to a JSON file

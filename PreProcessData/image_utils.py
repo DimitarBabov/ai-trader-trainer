@@ -7,16 +7,16 @@ def price_to_pixel(value, min_price, max_price, height):
     scale = (max_price - min_price) / (height - 1)
     return height - int((value - min_price) / scale) - 1
 
-def create_candlestick_with_regression_image(data, height=224, candlestick_width=3, spacing=0, blur=False, blur_radius = 1, draw_regression_lines=True, color_candles=True):
+def create_candlestick_with_regression_image(data, height=224, candlestick_width=3, spacing=1, blur=False, blur_radius=0, draw_regression_lines=True, color_candles=True):
     """Create a candlestick image with bull and bear candles in different colors, and draw regression lines below."""
     num_candlesticks = len(data)
     min_price = data[['Low']].min().min()
     max_price = data[['High']].max().max()
 
-    # Calculate price change using (close[last candle] - open[first candle]) / open[first candle]
+    # Calculate price change in pixels using the difference between last close and first open
     first_open_price = data['Open'].iloc[0]
     last_close_price = data['Close'].iloc[-1]
-    price_change = (last_close_price - first_open_price) / first_open_price
+    price_change_pixels = price_to_pixel(last_close_price, min_price, max_price, height) - price_to_pixel(first_open_price, min_price, max_price, height)
 
     total_width = (candlestick_width + spacing) * num_candlesticks
 
@@ -180,4 +180,4 @@ def create_candlestick_with_regression_image(data, height=224, candlestick_width
         # Apply Gaussian blur
         image = image.filter(ImageFilter.GaussianBlur(radius=blur_radius))
 
-    return image, slope_first, slope_second, slope_last, slope, std_dev, colored_pixel_ratio, price_change, max_deviation_scaled
+    return image, slope_first, slope_second, slope_last, slope, std_dev, colored_pixel_ratio, price_change_pixels, max_deviation_scaled
