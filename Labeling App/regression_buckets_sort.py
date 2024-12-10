@@ -4,6 +4,8 @@ import json
 import os
 import shutil
 
+import numpy as np
+
 # Step 1: Load the JSON Data
 def load_json_data(file_path):
     try:
@@ -78,6 +80,78 @@ def sort_images_into_buckets(base_dir, data):
             else:
                 print(f"Warning: Image {img} not found in the images directory.")
 
+
+def normalize_json(input_json_path):
+    """
+    Normalizes max_dev and colored_pixels_ratio in the input JSON file and saves the output
+    to a new JSON file with '_normalized' appended to the original file name.
+    
+    Args:
+        input_json_path (str): Path to the input JSON file.
+    
+    Returns:
+        None
+    """
+    # Load the JSON data
+    with open(input_json_path, 'r') as file:
+        json_data = json.load(file)
+
+    # Extract filename and directory
+    base, ext = os.path.splitext(input_json_path)
+    output_json_path = f"{base}_normalized{ext}"
+
+    # Parameters
+    epsilon = 1e-6  # Small constant to avoid log(0)
+
+    # Extract max_dev and colored_pixels_ratio values for calculations
+    max_dev_values = [item["max_dev"] for item in json_data.values() if isinstance(item, dict)]
+    colored_pixels_ratios = [item["colored_pixels_ratio"] for item in json_data.values() if isinstance(item, dict)]
+    max_dev_mean = np.mean(max_dev_values)
+    max_dev_std = np.std(max_dev_values)
+    colored_pixels_mean = np.mean(colored_pixels_ratios)
+    colored_pixels_std = np.std(colored_pixels_ratios)
+
+    # Process the data
+    modified_json = {
+        "_comments": [
+            "shape: Represents the sequence of slopes. 'n' = negative slope, 'p' = positive slope.",
+            "max_dev_log: Logarithmic representation of the normalized signed max_dev distance from the mean.",
+            "colored_pixels_ratio_scaled: Adjusted colored pixel ratio, scaled by the mean and spread."
+        ]
+    }
+
+    for key, value in json_data.items():
+        if not isinstance(value, dict):  # Skip metadata or comments
+            modified_json[key] = value
+            continue
+
+        # Normalize max_dev by its standard deviation
+        max_dev = value["max_dev"]
+        max_dev_signed_distance = (max_dev - max_dev_mean) / (max_dev_std + epsilon)  # Normalized by std_dev
+        max_dev_log = np.sign(max_dev_signed_distance) * np.log(abs(max_dev_signed_distance) + epsilon)  # Log-transformed with sign
+
+        # Adjust colored_pixels_ratio
+        colored_pixels_ratio = value["colored_pixels_ratio"]
+        adjusted_difference = (colored_pixels_ratio - colored_pixels_mean) / (colored_pixels_std + epsilon)  # Adjusted by std_dev
+        colored_pixels_ratio_scaled = 1 + adjusted_difference  # Shift to 1.0
+
+        # Determine "shape" sequence
+        slopes = [value["slope_first"], value["slope_second"], value["slope_third"], value["slope_whole"]]
+        shape = "".join("p" if s > 0 else "n" for s in slopes)
+
+        # Create modified entry
+        modified_json[key] = {
+            "shape": shape,
+            "max_dev_log": max_dev_log,
+            "colored_pixels_ratio_scaled": colored_pixels_ratio_scaled
+        }
+
+    # Save the modified JSON to the output file
+    with open(output_json_path, 'w') as file:
+        json.dump(modified_json, file, indent=4)
+
+    print(f"Normalized JSON saved to: {output_json_path}")
+
 # Prompt user for the ticker and timeframe
 ticker = input("Enter the ticker symbol: ")
 timeframe = input("Enter the timeframe (e.g., '1d'): ")
@@ -86,8 +160,13 @@ timeframe = input("Enter the timeframe (e.g., '1d'): ")
 base_dir = os.path.join('data_processed_imgs', ticker, timeframe)
 regression_json = os.path.join(base_dir, 'regression_data', f'{ticker}_{timeframe}_regression_data.json')
 
+
 # Load the JSON data
 data = load_json_data(regression_json)
 
+
+normalize_json(regression_json)
+
 # Sort images into buckets based on slopes and max_dev
-sort_images_into_buckets(base_dir, data)
+# TO DO.....
+#sort_images_into_buckets(base_dir, data)
