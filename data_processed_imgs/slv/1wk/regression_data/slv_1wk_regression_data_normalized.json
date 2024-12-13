@@ -1,2392 +1,1915 @@
 {
     "_comments": [
         "shape: sequence of slopes ('n' = negative, 'p' = positive).",
-        "trend_strength = (price_change / max_dev_log) * log(max_dev_std)",
-        "colored_pixels_ratio_scaled: adjusted colored pixel ratio."
+        "trend_strength = (price_change / max_dev_norm)",
+        "colored_pixels_ratio_norm: nomralized by the mean of the dataset."
     ],
     "slv_1wk_16c_2006-08-07 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 14.727125949183222,
-        "colored_pixels_ratio_scaled": 0.6103533453811723
+        "trend_strength": 12.881591317969994
     },
     "slv_1wk_16c_2006-08-21 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 18.361531314392842,
-        "colored_pixels_ratio_scaled": 0.3185313101273166
+        "trend_strength": 16.513900497746416
     },
     "slv_1wk_16c_2006-09-04 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": 5.891307720742423,
-        "colored_pixels_ratio_scaled": 1.865188096972752
+        "trend_strength": 3.6460843819035125
     },
     "slv_1wk_16c_2006-09-18 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": 26.104094706610876,
-        "colored_pixels_ratio_scaled": 2.040281318125065
+        "trend_strength": 17.16623584473797
     },
     "slv_1wk_16c_2006-10-02 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -26.816814244544513,
-        "colored_pixels_ratio_scaled": 1.8943703004981376
+        "trend_strength": -17.242481256833983
     },
     "slv_1wk_16c_2006-10-16 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -14.795029056743989,
-        "colored_pixels_ratio_scaled": 2.157010132226608
+        "trend_strength": -8.140450068994927
     },
     "slv_1wk_16c_2006-10-30 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -34.16958478030606,
-        "colored_pixels_ratio_scaled": 2.478014371005849
+        "trend_strength": -18.4059741204981
     },
     "slv_1wk_16c_2006-11-13 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -36.52610786860303,
-        "colored_pixels_ratio_scaled": 2.127827928701222
+        "trend_strength": -20.707791387596533
     },
     "slv_1wk_16c_2006-11-27 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -48.19786674278145,
-        "colored_pixels_ratio_scaled": 0.8146287700588714
+        "trend_strength": -39.34740620761744
     },
     "slv_1wk_16c_2006-12-11 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -7.344612525757137,
-        "colored_pixels_ratio_scaled": 1.2815440264650406
+        "trend_strength": -5.319084055453901
     },
     "slv_1wk_16c_2006-12-25 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -33.5512661333812,
-        "colored_pixels_ratio_scaled": 0.6103533453811723
+        "trend_strength": -31.363874513318244
     },
     "slv_1wk_16c_2007-01-08 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -42.18132349853864,
-        "colored_pixels_ratio_scaled": 0.639535548906558
+        "trend_strength": -38.03582600069685
     },
     "slv_1wk_16c_2007-01-22 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -51.07964618008479,
-        "colored_pixels_ratio_scaled": 0.9313575841604136
+        "trend_strength": -40.31603829656078
     },
     "slv_1wk_16c_2007-02-05 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -60.01858426159962,
-        "colored_pixels_ratio_scaled": 1.2231796194142694
+        "trend_strength": -44.278066873559546
     },
     "slv_1wk_16c_2007-02-19 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -62.719045245982095,
-        "colored_pixels_ratio_scaled": 1.7484592828712096
+        "trend_strength": -41.72012546427049
     },
     "slv_1wk_16c_2007-03-05 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": 2.448204175252379,
-        "colored_pixels_ratio_scaled": 2.7406542027343193
+        "trend_strength": 1.3583887544774669
     },
     "slv_1wk_16c_2007-03-19 00-00-00.png": {
         "shape": "nnnp",
-        "trend_strength": 22.38696933882121,
-        "colored_pixels_ratio_scaled": 2.3612855569043067
+        "trend_strength": 12.787732202271261
     },
     "slv_1wk_16c_2007-04-02 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -30.634800147860606,
-        "colored_pixels_ratio_scaled": 2.0110991145996797
+        "trend_strength": -18.65433059288863
     },
     "slv_1wk_16c_2007-04-16 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -24.00794722232012,
-        "colored_pixels_ratio_scaled": 2.069463521650451
+        "trend_strength": -14.526995962727957
     },
     "slv_1wk_16c_2007-04-30 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -18.209266531377217,
-        "colored_pixels_ratio_scaled": 1.9235525040235233
+        "trend_strength": -10.374080732705163
     },
     "slv_1wk_16c_2007-05-14 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 9.603178888928047,
-        "colored_pixels_ratio_scaled": 1.9235525040235233
+        "trend_strength": 5.623927380363901
     },
     "slv_1wk_16c_2007-05-28 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 1.2241020876261894,
-        "colored_pixels_ratio_scaled": 2.215374539277379
+        "trend_strength": 0.7034152762784505
     },
     "slv_1wk_16c_2007-06-11 00-00-00.png": {
         "shape": "pnpn",
-        "trend_strength": 43.67117783567237,
-        "colored_pixels_ratio_scaled": 2.0986457251758366
+        "trend_strength": 24.527807705707467
     },
     "slv_1wk_16c_2007-06-25 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 18.29305486341144,
-        "colored_pixels_ratio_scaled": 1.6317304687696674
+        "trend_strength": 11.757540717322208
     },
     "slv_1wk_16c_2007-07-09 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 16.513863661499748,
-        "colored_pixels_ratio_scaled": 1.6900948758204386
+        "trend_strength": 11.21676529949245
     },
     "slv_1wk_16c_2007-07-23 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 49.46038997042061,
-        "colored_pixels_ratio_scaled": 2.0110991145996797
+        "trend_strength": 30.979041697203915
     },
     "slv_1wk_16c_2007-08-06 00-00-00.png": {
         "shape": "npnn",
-        "trend_strength": 48.34593071044453,
-        "colored_pixels_ratio_scaled": 2.419649963955078
+        "trend_strength": 28.092612340993902
     },
     "slv_1wk_16c_2007-08-20 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 44.06767515454282,
-        "colored_pixels_ratio_scaled": 1.456637247617354
+        "trend_strength": 30.596670222036444
     },
     "slv_1wk_16c_2007-09-03 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 10.215929236016956,
-        "colored_pixels_ratio_scaled": 1.4858194511427396
+        "trend_strength": 7.278679346514216
     },
     "slv_1wk_16c_2007-09-17 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 7.069569264890908,
-        "colored_pixels_ratio_scaled": 1.4858194511427396
+        "trend_strength": 4.7737661943065275
     },
     "slv_1wk_16c_2007-10-01 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -1.0862054148550107,
-        "colored_pixels_ratio_scaled": 1.3399084335158116
+        "trend_strength": -0.7075218994877733
     },
     "slv_1wk_16c_2007-10-15 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -23.51524960382358,
-        "colored_pixels_ratio_scaled": 1.2815440264650406
+        "trend_strength": -16.040932794906563
     },
     "slv_1wk_16c_2007-10-29 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -37.89275650278085,
-        "colored_pixels_ratio_scaled": 0.9313575841604136
+        "trend_strength": -31.04252334002605
     },
     "slv_1wk_16c_2007-11-12 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -38.56102341092114,
-        "colored_pixels_ratio_scaled": 0.3768957171780877
+        "trend_strength": -41.04341509587681
     },
     "slv_1wk_16c_2007-11-26 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -26.291606871082596,
-        "colored_pixels_ratio_scaled": 0.49362453127963
+        "trend_strength": -26.796140430305503
     },
     "slv_1wk_16c_2007-12-10 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -39.544131900683126,
-        "colored_pixels_ratio_scaled": 0.6687177524319434
+        "trend_strength": -36.01333324147699
     },
     "slv_1wk_16c_2007-12-24 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -47.13046176593939,
-        "colored_pixels_ratio_scaled": 1.6900948758204386
+        "trend_strength": -31.376867004831638
     },
     "slv_1wk_16c_2008-01-07 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -63.62106013914832,
-        "colored_pixels_ratio_scaled": 2.157010132226608
+        "trend_strength": -38.92770054140285
     },
     "slv_1wk_16c_2008-01-21 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -72.22202316994519,
-        "colored_pixels_ratio_scaled": 2.1861923357519935
+        "trend_strength": -44.19384553036146
     },
     "slv_1wk_16c_2008-02-04 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -81.01210010939354,
-        "colored_pixels_ratio_scaled": 1.5733660617188963
+        "trend_strength": -58.041193064876296
     },
     "slv_1wk_16c_2008-02-18 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -64.02569202194005,
-        "colored_pixels_ratio_scaled": 0.8729931771096424
+        "trend_strength": -53.773458280694214
     },
     "slv_1wk_16c_2008-03-03 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -85.88591577886982,
-        "colored_pixels_ratio_scaled": -0.17756614980423824
+        "trend_strength": -108.5217570331437
     },
     "slv_1wk_16c_2008-03-17 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -32.1319111618543,
-        "colored_pixels_ratio_scaled": 0.6687177524319434
+        "trend_strength": -29.987630597029455
     },
     "slv_1wk_16c_2008-03-31 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -46.859037111037516,
-        "colored_pixels_ratio_scaled": 0.7270821594827146
+        "trend_strength": -41.7091172630306
     },
     "slv_1wk_16c_2008-04-14 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -36.723062628785684,
-        "colored_pixels_ratio_scaled": 1.106450805312727
+        "trend_strength": -27.41690044027397
     },
     "slv_1wk_16c_2008-04-28 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -1.1025134231604057,
-        "colored_pixels_ratio_scaled": 1.6900948758204386
+        "trend_strength": -0.666641057469315
     },
     "slv_1wk_16c_2008-05-12 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": -5.431027074275053,
-        "colored_pixels_ratio_scaled": 1.7484592828712096
+        "trend_strength": -3.1631068633451753
     },
     "slv_1wk_16c_2008-05-26 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 7.202384166696035,
-        "colored_pixels_ratio_scaled": 2.1861923357519935
+        "trend_strength": 4.17954238927651
     },
     "slv_1wk_16c_2008-06-09 00-00-00.png": {
         "shape": "npnn",
-        "trend_strength": 28.85189414941202,
-        "colored_pixels_ratio_scaled": 2.53637877805662
+        "trend_strength": 17.001965645266793
     },
     "slv_1wk_16c_2008-06-23 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 30.602552190654738,
-        "colored_pixels_ratio_scaled": 2.157010132226608
+        "trend_strength": 18.235688787958292
     },
     "slv_1wk_16c_2008-07-07 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": -48.30872331008787,
-        "colored_pixels_ratio_scaled": 3.4118448838181874
+        "trend_strength": -21.094240150361404
     },
     "slv_1wk_16c_2008-07-21 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": 13.745172676932723,
-        "colored_pixels_ratio_scaled": 2.711471999208934
+        "trend_strength": 7.186314701106601
     },
     "slv_1wk_16c_2008-08-04 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": 39.83277053738767,
-        "colored_pixels_ratio_scaled": 2.4488321674804636
+        "trend_strength": 21.469318863283323
     },
     "slv_1wk_16c_2008-08-18 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 39.17126680403806,
-        "colored_pixels_ratio_scaled": 0.9605397876857992
+        "trend_strength": 31.299073119695684
     },
     "slv_1wk_16c_2008-09-01 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 59.07768802022461,
-        "colored_pixels_ratio_scaled": 0.7270821594827146
+        "trend_strength": 53.14050495734269
     },
     "slv_1wk_16c_2008-09-15 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 46.97177258673368,
-        "colored_pixels_ratio_scaled": 0.3185313101273166
+        "trend_strength": 50.244614891982465
     },
     "slv_1wk_16c_2008-09-29 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 80.93686786629692,
-        "colored_pixels_ratio_scaled": 0.40607792070347326
+        "trend_strength": 83.92660049824218
     },
     "slv_1wk_16c_2008-10-13 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 112.44861262666278,
-        "colored_pixels_ratio_scaled": 0.43526012422885885
+        "trend_strength": 114.69511889646203
     },
     "slv_1wk_16c_2008-10-27 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 119.06323689881943,
-        "colored_pixels_ratio_scaled": 0.289349106601931
+        "trend_strength": 127.18168144533063
     },
     "slv_1wk_16c_2008-11-10 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 102.85497029649572,
-        "colored_pixels_ratio_scaled": 0.6103533453811723
+        "trend_strength": 98.46502620387956
     },
     "slv_1wk_16c_2008-11-24 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 80.6275944046533,
-        "colored_pixels_ratio_scaled": 1.2231796194142694
+        "trend_strength": 63.81342160594366
     },
     "slv_1wk_16c_2008-12-08 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 57.04789264881731,
-        "colored_pixels_ratio_scaled": 1.3982728405665827
+        "trend_strength": 40.447762283406625
     },
     "slv_1wk_16c_2008-12-22 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 26.816814244544513,
-        "colored_pixels_ratio_scaled": 1.6900948758204386
+        "trend_strength": 16.778680336950792
     },
     "slv_1wk_16c_2009-01-05 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 25.037741480643675,
-        "colored_pixels_ratio_scaled": 0.8729931771096424
+        "trend_strength": 17.239423266010746
     },
     "slv_1wk_16c_2009-01-19 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -10.921584939980782,
-        "colored_pixels_ratio_scaled": 1.6900948758204386
+        "trend_strength": -5.32724633277685
     },
     "slv_1wk_16c_2009-02-02 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -91.21101139500564,
-        "colored_pixels_ratio_scaled": 0.1434380889750031
+        "trend_strength": -86.55377040199824
     },
     "slv_1wk_16c_2009-02-16 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -90.13423921473975,
-        "colored_pixels_ratio_scaled": -0.4693881850580939
+        "trend_strength": -110.05023248431475
     },
     "slv_1wk_16c_2009-03-02 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -97.01448932496396,
-        "colored_pixels_ratio_scaled": -0.32347716743116606
+        "trend_strength": -114.13442828031496
     },
     "slv_1wk_16c_2009-03-16 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -74.18094822156795,
-        "colored_pixels_ratio_scaled": 0.026709274873460864
+        "trend_strength": -75.19088281134485
     },
     "slv_1wk_16c_2009-03-30 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -44.18137784754966,
-        "colored_pixels_ratio_scaled": 0.7270821594827146
+        "trend_strength": -35.284358827483025
     },
     "slv_1wk_16c_2009-04-13 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -12.495611524484293,
-        "colored_pixels_ratio_scaled": 1.0772686017873414
+        "trend_strength": -9.237606799154042
     },
     "slv_1wk_16c_2009-04-27 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -26.40874194455213,
-        "colored_pixels_ratio_scaled": 1.252361822939655
+        "trend_strength": -18.496643943751785
     },
     "slv_1wk_16c_2009-05-11 00-00-00.png": {
         "shape": "pppn",
-        "trend_strength": -48.01589444464024,
-        "colored_pixels_ratio_scaled": 3.441027087343573
+        "trend_strength": -22.502601589323696
     },
     "slv_1wk_16c_2009-05-25 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -48.616466789138244,
-        "colored_pixels_ratio_scaled": 2.3029211498535354
+        "trend_strength": -27.88113752748352
     },
     "slv_1wk_16c_2009-06-08 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -11.016918788635705,
-        "colored_pixels_ratio_scaled": 1.7776414863965952
+        "trend_strength": -7.172704256596928
     },
     "slv_1wk_16c_2009-06-22 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": -13.738997214005725,
-        "colored_pixels_ratio_scaled": 1.3982728405665827
+        "trend_strength": -10.428714986873683
     },
     "slv_1wk_16c_2009-07-06 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": 19.58563340201903,
-        "colored_pixels_ratio_scaled": 1.3690906370411973
+        "trend_strength": 14.73613948437034
     },
     "slv_1wk_16c_2009-07-20 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -25.037741480643675,
-        "colored_pixels_ratio_scaled": 1.456637247617354
+        "trend_strength": -17.768848932529306
     },
     "slv_1wk_16c_2009-08-03 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -45.95220022179091,
-        "colored_pixels_ratio_scaled": 1.2815440264650406
+        "trend_strength": -33.4807494167163
     },
     "slv_1wk_16c_2009-08-17 00-00-00.png": {
         "shape": "pppn",
-        "trend_strength": -32.410728750132165,
-        "colored_pixels_ratio_scaled": 1.310726229990426
+        "trend_strength": -22.783884109190247
     },
     "slv_1wk_16c_2009-08-31 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": -43.24700801202089,
-        "colored_pixels_ratio_scaled": 1.1648152123634983
+        "trend_strength": -30.342217626894538
     },
     "slv_1wk_16c_2009-09-14 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -18.29305486341144,
-        "colored_pixels_ratio_scaled": -0.2651127603803949
+        "trend_strength": -19.81894397337239
     },
     "slv_1wk_16c_2009-09-28 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -33.5512661333812,
-        "colored_pixels_ratio_scaled": -0.2067483533296237
+        "trend_strength": -38.26891850431404
     },
     "slv_1wk_16c_2009-10-12 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -88.19499029542179,
-        "colored_pixels_ratio_scaled": 0.08507368192423193
+        "trend_strength": -96.61193488477495
     },
     "slv_1wk_16c_2009-10-26 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -77.12204682184228,
-        "colored_pixels_ratio_scaled": 0.289349106601931
+        "trend_strength": -79.92147016271456
     },
     "slv_1wk_16c_2009-11-09 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -70.91158791167847,
-        "colored_pixels_ratio_scaled": 0.7562643630081002
+        "trend_strength": -62.0850466800521
     },
     "slv_1wk_16c_2009-11-23 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -82.77634213598549,
-        "colored_pixels_ratio_scaled": 0.7270821594827146
+        "trend_strength": -77.15832626451298
     },
     "slv_1wk_16c_2009-12-07 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -62.10111414128043,
-        "colored_pixels_ratio_scaled": 0.9605397876857992
+        "trend_strength": -54.29659996391654
     },
     "slv_1wk_16c_2009-12-21 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -15.913327139140463,
-        "colored_pixels_ratio_scaled": 1.9235525040235233
+        "trend_strength": -9.310408853494955
     },
     "slv_1wk_16c_2010-01-04 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -37.70436941275152,
-        "colored_pixels_ratio_scaled": 2.653107592158163
+        "trend_strength": -19.940766946846846
     },
     "slv_1wk_16c_2010-01-18 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -18.85218470637576,
-        "colored_pixels_ratio_scaled": 3.441027087343573
+        "trend_strength": -9.046731197332166
     },
     "slv_1wk_16c_2010-02-01 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 35.347846324454544,
-        "colored_pixels_ratio_scaled": 1.6900948758204386
+        "trend_strength": 23.006102141236276
     },
     "slv_1wk_16c_2010-02-15 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 4.2368712750731925,
-        "colored_pixels_ratio_scaled": 1.456637247617354
+        "trend_strength": 3.149428563395575
     },
     "slv_1wk_16c_2010-03-01 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 9.617298049804006,
-        "colored_pixels_ratio_scaled": 1.310726229990426
+        "trend_strength": 7.219584676574687
     },
     "slv_1wk_16c_2010-03-15 00-00-00.png": {
         "shape": "pppn",
-        "trend_strength": 20.431858472033912,
-        "colored_pixels_ratio_scaled": 0.9897219912111848
+        "trend_strength": 15.779949364513241
     },
     "slv_1wk_16c_2010-03-29 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": -10.242712423899684,
-        "colored_pixels_ratio_scaled": 1.3399084335158116
+        "trend_strength": -6.910926728983902
     },
     "slv_1wk_16c_2010-04-12 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -2.2395475813165318,
-        "colored_pixels_ratio_scaled": 1.7484592828712096
+        "trend_strength": -1.4216170598660576
     },
     "slv_1wk_16c_2010-04-26 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": 2.315069847101821,
-        "colored_pixels_ratio_scaled": 1.3690906370411973
+        "trend_strength": 1.5941858868647947
     },
     "slv_1wk_16c_2010-05-10 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -49.6658052815913,
-        "colored_pixels_ratio_scaled": 0.3768957171780877
+        "trend_strength": -49.03684061002077
     },
     "slv_1wk_16c_2010-05-24 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -79.09739359660836,
-        "colored_pixels_ratio_scaled": 0.7270821594827146
+        "trend_strength": -72.48206406666371
     },
     "slv_1wk_16c_2010-06-07 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -39.544131900683126,
-        "colored_pixels_ratio_scaled": 1.7484592828712096
+        "trend_strength": -27.604128525193023
     },
     "slv_1wk_16c_2010-06-21 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -36.723062628785684,
-        "colored_pixels_ratio_scaled": 2.9449296274120185
+        "trend_strength": -19.063026077935458
     },
     "slv_1wk_16c_2010-07-05 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -33.61112611124817,
-        "colored_pixels_ratio_scaled": 3.5869381049705007
+        "trend_strength": -15.90777973740309
     },
     "slv_1wk_16c_2010-07-19 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": -3.4142374746332282,
-        "colored_pixels_ratio_scaled": 4.5207686177828394
+        "trend_strength": -1.348713620898568
     },
     "slv_1wk_16c_2010-08-02 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": -21.208707794672726,
-        "colored_pixels_ratio_scaled": 4.024671157851285
+        "trend_strength": -8.930876621865218
     },
     "slv_1wk_16c_2010-08-16 00-00-00.png": {
         "shape": "pppn",
-        "trend_strength": 24.00794722232012,
-        "colored_pixels_ratio_scaled": 3.878760140224357
+        "trend_strength": 10.385816118149398
     },
     "slv_1wk_16c_2010-08-30 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -12.732884159060015,
-        "colored_pixels_ratio_scaled": 4.608315228358996
+        "trend_strength": -5.10293263785821
     },
     "slv_1wk_16c_2010-09-13 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -49.652577486402485,
-        "colored_pixels_ratio_scaled": 2.069463521650451
+        "trend_strength": -31.608420427050465
     },
     "slv_1wk_16c_2010-09-27 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -69.81736303206395,
-        "colored_pixels_ratio_scaled": 0.5811711418557868
+        "trend_strength": -64.92322024256876
     },
     "slv_1wk_16c_2010-10-11 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -72.52321490967117,
-        "colored_pixels_ratio_scaled": -0.0024729286519247218
+        "trend_strength": -86.7957489873914
     },
     "slv_1wk_16c_2010-10-25 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -119.50799803215426,
-        "colored_pixels_ratio_scaled": -0.09001953922808159
+        "trend_strength": -145.58866290241878
     },
     "slv_1wk_16c_2010-11-08 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -73.61649923903127,
-        "colored_pixels_ratio_scaled": -0.6736636097357929
+        "trend_strength": -111.6223786626621
     },
     "slv_1wk_16c_2010-11-22 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -78.87482061324779,
-        "colored_pixels_ratio_scaled": -0.4402059815327084
+        "trend_strength": -107.8629450232551
     },
     "slv_1wk_16c_2010-12-06 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -107.14510168400037,
-        "colored_pixels_ratio_scaled": -0.2651127603803949
+        "trend_strength": -137.09277275957209
     },
     "slv_1wk_16c_2010-12-20 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -88.91085525346018,
-        "colored_pixels_ratio_scaled": -0.11920174275346707
+        "trend_strength": -103.05273054375995
     },
     "slv_1wk_16c_2011-01-03 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -74.13484190766385,
-        "colored_pixels_ratio_scaled": 0.43526012422885885
+        "trend_strength": -73.32097684521305
     },
     "slv_1wk_16c_2011-01-17 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -54.04537198309008,
-        "colored_pixels_ratio_scaled": 1.1648152123634983
+        "trend_strength": -43.447661730208544
     },
     "slv_1wk_16c_2011-01-31 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -55.27207906705063,
-        "colored_pixels_ratio_scaled": 1.5441838581935108
+        "trend_strength": -39.768742854400216
     },
     "slv_1wk_16c_2011-02-14 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -90.58841856012924,
-        "colored_pixels_ratio_scaled": 1.4274550440919684
+        "trend_strength": -70.56871765496604
     },
     "slv_1wk_16c_2011-02-28 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -86.98421591764303,
-        "colored_pixels_ratio_scaled": 0.639535548906558
+        "trend_strength": -81.2421066688596
     },
     "slv_1wk_16c_2011-03-14 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -72.02681167624426,
-        "colored_pixels_ratio_scaled": 0.8146287700588714
+        "trend_strength": -62.2953008294282
     },
     "slv_1wk_16c_2011-03-28 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -69.898030648106,
-        "colored_pixels_ratio_scaled": 0.17262029250038868
+        "trend_strength": -74.28286068943795
     },
     "slv_1wk_16c_2011-04-11 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -100.9143104795807,
-        "colored_pixels_ratio_scaled": -0.17756614980423824
+        "trend_strength": -129.47650760626252
     },
     "slv_1wk_16c_2011-04-25 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -114.65348738404833,
-        "colored_pixels_ratio_scaled": -0.9071212379388776
+        "trend_strength": -184.39491392240194
     },
     "slv_1wk_16c_2011-05-09 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -27.490345353865447,
-        "colored_pixels_ratio_scaled": -0.09001953922808159
+        "trend_strength": -29.37357047228272
     },
     "slv_1wk_16c_2011-05-23 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -33.05075636590711,
-        "colored_pixels_ratio_scaled": 0.3477135136527021
+        "trend_strength": -30.360472649063485
     },
     "slv_1wk_16c_2011-06-06 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -10.561286794358395,
-        "colored_pixels_ratio_scaled": 0.8146287700588714
+        "trend_strength": -7.681533081452621
     },
     "slv_1wk_16c_2011-06-20 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 8.231947535471138,
-        "colored_pixels_ratio_scaled": 1.0189041947365702
+        "trend_strength": 5.558919825671377
     },
     "slv_1wk_16c_2011-07-04 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": -3.258616244565032,
-        "colored_pixels_ratio_scaled": 1.0189041947365702
+        "trend_strength": -2.321291969036579
     },
     "slv_1wk_16c_2011-07-18 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": -6.945209541305463,
-        "colored_pixels_ratio_scaled": 1.048086398261956
+        "trend_strength": -5.032807770741765
     },
     "slv_1wk_16c_2011-08-01 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 21.623504006010446,
-        "colored_pixels_ratio_scaled": 0.8146287700588714
+        "trend_strength": 15.863441160092679
     },
     "slv_1wk_16c_2011-08-15 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": 10.364895885797901,
-        "colored_pixels_ratio_scaled": 1.310726229990426
+        "trend_strength": 5.824202764295546
     },
     "slv_1wk_16c_2011-08-29 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -77.66447849789556,
-        "colored_pixels_ratio_scaled": 1.4274550440919684
+        "trend_strength": -55.81706481183756
     },
     "slv_1wk_16c_2011-09-12 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -17.086185269537022,
-        "colored_pixels_ratio_scaled": 1.0189041947365702
+        "trend_strength": -12.914536564307515
     },
     "slv_1wk_16c_2011-09-26 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": 23.376933676806818,
-        "colored_pixels_ratio_scaled": 0.7854465665334858
+        "trend_strength": 15.837330998566019
     },
     "slv_1wk_16c_2011-10-10 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 7.344612525757137,
-        "colored_pixels_ratio_scaled": 0.639535548906558
+        "trend_strength": 5.749779120672841
     },
     "slv_1wk_16c_2011-10-24 00-00-00.png": {
         "shape": "pnpn",
-        "trend_strength": 7.839880655747762,
-        "colored_pixels_ratio_scaled": 0.9897219912111848
+        "trend_strength": 5.936031108907803
     },
     "slv_1wk_16c_2011-11-07 00-00-00.png": {
         "shape": "pppn",
-        "trend_strength": 29.989467658762308,
-        "colored_pixels_ratio_scaled": 0.7270821594827146
+        "trend_strength": 23.3626804625617
     },
     "slv_1wk_16c_2011-11-21 00-00-00.png": {
         "shape": "npnn",
-        "trend_strength": 40.813510277944204,
-        "colored_pixels_ratio_scaled": 0.8146287700588714
+        "trend_strength": 30.906543489811714
     },
     "slv_1wk_16c_2011-12-05 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 51.84350794253333,
-        "colored_pixels_ratio_scaled": 0.46444232775424443
+        "trend_strength": 41.711205328976185
     },
     "slv_1wk_16c_2011-12-19 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 69.7738189946928,
-        "colored_pixels_ratio_scaled": 0.3477135136527021
+        "trend_strength": 58.0294912114358
     },
     "slv_1wk_16c_2012-01-02 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 61.205104381309475,
-        "colored_pixels_ratio_scaled": 0.3768957171780877
+        "trend_strength": 50.46892120846452
     },
     "slv_1wk_16c_2012-01-16 00-00-00.png": {
         "shape": "pnpn",
-        "trend_strength": -9.996489219587435,
-        "colored_pixels_ratio_scaled": 0.3185313101273166
+        "trend_strength": -7.650401560473562
     },
     "slv_1wk_16c_2012-01-30 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": -12.00397361116006,
-        "colored_pixels_ratio_scaled": 0.6687177524319434
+        "trend_strength": -8.743868046137209
     },
     "slv_1wk_16c_2012-02-13 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 11.197737906582658,
-        "colored_pixels_ratio_scaled": -0.09001953922808159
+        "trend_strength": 9.263025186457572
     },
     "slv_1wk_16c_2012-02-27 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -1.3066467759579603,
-        "colored_pixels_ratio_scaled": -0.2359305568550094
+        "trend_strength": -1.3325784122037925
     },
     "slv_1wk_16c_2012-03-12 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": -2.824580850048795,
-        "colored_pixels_ratio_scaled": -0.38184157448193723
+        "trend_strength": -3.140939537618228
     },
     "slv_1wk_16c_2012-03-26 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -9.00756199718168,
-        "colored_pixels_ratio_scaled": -0.4402059815327084
+        "trend_strength": -10.29127132468255
     },
     "slv_1wk_16c_2012-04-09 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -19.234596099608012,
-        "colored_pixels_ratio_scaled": -0.4985703885834796
+        "trend_strength": -21.819189244759055
     },
     "slv_1wk_16c_2012-04-23 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": -17.07118737316614,
-        "colored_pixels_ratio_scaled": -0.09001953922808159
+        "trend_strength": -14.782153971440977
     },
     "slv_1wk_16c_2012-05-07 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 28.093805399046634,
-        "colored_pixels_ratio_scaled": -0.2942949639057806
+        "trend_strength": 27.912272242757094
     },
     "slv_1wk_16c_2012-05-21 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 46.73718294178808,
-        "colored_pixels_ratio_scaled": -0.9946678485150342
+        "trend_strength": 62.40252703239328
     },
     "slv_1wk_16c_2012-06-04 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 60.16045432436542,
-        "colored_pixels_ratio_scaled": -1.0530322555658054
+        "trend_strength": 81.0233424927388
     },
     "slv_1wk_16c_2012-06-18 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 102.33136170681266,
-        "colored_pixels_ratio_scaled": -0.6736636097357929
+        "trend_strength": 113.11957825754627
     },
     "slv_1wk_16c_2012-07-02 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 72.06049597745344,
-        "colored_pixels_ratio_scaled": -0.5861169991596362
+        "trend_strength": 74.2585852447682
     },
     "slv_1wk_16c_2012-07-16 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 65.45377784255996,
-        "colored_pixels_ratio_scaled": -0.7612102203119497
+        "trend_strength": 71.75724342599706
     },
     "slv_1wk_16c_2012-07-30 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 54.8920149015011,
-        "colored_pixels_ratio_scaled": -0.35265937095655175
+        "trend_strength": 49.95968524672146
     },
     "slv_1wk_16c_2012-08-13 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 43.964791084818316,
-        "colored_pixels_ratio_scaled": -0.2359305568550094
+        "trend_strength": 37.957876789432845
     },
     "slv_1wk_16c_2012-08-27 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -41.67125724783278,
-        "colored_pixels_ratio_scaled": 0.17262029250038868
+        "trend_strength": -31.73436427335337
     },
     "slv_1wk_16c_2012-09-10 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -57.492458142150255,
-        "colored_pixels_ratio_scaled": -0.35265937095655175
+        "trend_strength": -62.28810963059895
     },
     "slv_1wk_16c_2012-09-24 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -61.55167364740816,
-        "colored_pixels_ratio_scaled": -0.38184157448193723
+        "trend_strength": -72.69414875787
     },
     "slv_1wk_16c_2012-10-08 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -96.8426880605388,
-        "colored_pixels_ratio_scaled": -0.4985703885834796
+        "trend_strength": -124.64833951800378
     },
     "slv_1wk_16c_2012-10-22 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -49.43016487585391,
-        "colored_pixels_ratio_scaled": -0.2651127603803949
+        "trend_strength": -58.098432900245996
     },
     "slv_1wk_16c_2012-11-05 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -57.70378829882404,
-        "colored_pixels_ratio_scaled": 0.23098469955115986
+        "trend_strength": -59.20785021190899
     },
     "slv_1wk_16c_2012-11-19 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -69.25227912577189,
-        "colored_pixels_ratio_scaled": 0.7270821594827146
+        "trend_strength": -60.84758042185933
     },
     "slv_1wk_16c_2012-12-03 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -47.793038253620466,
-        "colored_pixels_ratio_scaled": 1.106450805312727
+        "trend_strength": -33.70985996849438
     },
     "slv_1wk_16c_2012-12-17 00-00-00.png": {
         "shape": "npnn",
-        "trend_strength": 31.924778862552987,
-        "colored_pixels_ratio_scaled": 2.040281318125065
+        "trend_strength": 20.006274947084936
     },
     "slv_1wk_16c_2012-12-31 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 69.20223082619547,
-        "colored_pixels_ratio_scaled": 1.2815440264650406
+        "trend_strength": 51.348147351044766
     },
     "slv_1wk_16c_2013-01-14 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 48.01787445082951,
-        "colored_pixels_ratio_scaled": 1.456637247617354
+        "trend_strength": 35.12394621233717
     },
     "slv_1wk_16c_2013-01-28 00-00-00.png": {
         "shape": "pnpn",
-        "trend_strength": 22.49210074407173,
-        "colored_pixels_ratio_scaled": 2.419649963955078
+        "trend_strength": 12.859721044085497
     },
     "slv_1wk_16c_2013-02-11 00-00-00.png": {
         "shape": "ppnn",
-        "trend_strength": 41.81269683065473,
-        "colored_pixels_ratio_scaled": 2.478014371005849
+        "trend_strength": 24.367148108869348
     },
     "slv_1wk_16c_2013-02-25 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 59.63566425655463,
-        "colored_pixels_ratio_scaled": 0.9605397876857992
+        "trend_strength": 48.71363192056794
     },
     "slv_1wk_16c_2013-03-11 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 79.99906180757328,
-        "colored_pixels_ratio_scaled": 0.697899955957329
+        "trend_strength": 68.71598568629273
     },
     "slv_1wk_16c_2013-03-25 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 86.98421591764303,
-        "colored_pixels_ratio_scaled": 0.8438109735842569
+        "trend_strength": 73.76783285532451
     },
     "slv_1wk_16c_2013-04-08 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 69.90002224816551,
-        "colored_pixels_ratio_scaled": -0.060837335702695894
+        "trend_strength": 74.99381876204313
     },
     "slv_1wk_16c_2013-04-22 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 68.35817786481475,
-        "colored_pixels_ratio_scaled": -0.7028458132611786
+        "trend_strength": 98.79620471695247
     },
     "slv_1wk_16c_2013-05-06 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 109.20558440869269,
-        "colored_pixels_ratio_scaled": -0.8487568308881064
+        "trend_strength": 164.55909482812746
     },
     "slv_1wk_16c_2013-05-20 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 121.26811165620497,
-        "colored_pixels_ratio_scaled": -0.8779390344134921
+        "trend_strength": 185.97797465319178
     },
     "slv_1wk_16c_2013-06-03 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 104.00892501348171,
-        "colored_pixels_ratio_scaled": -0.527752592108865
+        "trend_strength": 132.32214513607045
     },
     "slv_1wk_16c_2013-06-17 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 104.79563011341074,
-        "colored_pixels_ratio_scaled": -0.6152992026850219
+        "trend_strength": 147.07525621293897
     },
     "slv_1wk_16c_2013-07-01 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 121.56848075684658,
-        "colored_pixels_ratio_scaled": -0.7028458132611786
+        "trend_strength": 178.2206045874437
     },
     "slv_1wk_16c_2013-07-15 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 121.26811165620497,
-        "colored_pixels_ratio_scaled": -0.527752592108865
+        "trend_strength": 159.73568375120766
     },
     "slv_1wk_16c_2013-07-29 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 61.55167364740816,
-        "colored_pixels_ratio_scaled": 0.3185313101273166
+        "trend_strength": 57.254683534959554
     },
     "slv_1wk_16c_2013-08-12 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 12.673544153230075,
-        "colored_pixels_ratio_scaled": 0.7562643630081002
+        "trend_strength": 9.160704327715811
     },
     "slv_1wk_16c_2013-08-26 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 3.4142374746332282,
-        "colored_pixels_ratio_scaled": 0.9605397876857992
+        "trend_strength": 2.5349316248214047
     },
     "slv_1wk_16c_2013-09-09 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": 3.919940327873881,
-        "colored_pixels_ratio_scaled": 0.902175380635028
+        "trend_strength": 3.1595004289347988
     },
     "slv_1wk_16c_2013-09-23 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": 1.3738997214005724,
-        "colored_pixels_ratio_scaled": 0.697899955957329
+        "trend_strength": 1.154454457394659
     },
     "slv_1wk_16c_2013-10-07 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -17.493856134278012,
-        "colored_pixels_ratio_scaled": 0.3477135136527021
+        "trend_strength": -14.90494900970258
     },
     "slv_1wk_16c_2013-10-21 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -43.24700801202089,
-        "colored_pixels_ratio_scaled": 0.5811711418557868
+        "trend_strength": -32.767107970027496
     },
     "slv_1wk_16c_2013-11-04 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -16.205488929712747,
-        "colored_pixels_ratio_scaled": 0.6103533453811723
+        "trend_strength": -12.046720787222833
     },
     "slv_1wk_16c_2013-11-18 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": -1.0561286794358398,
-        "colored_pixels_ratio_scaled": 1.0189041947365702
+        "trend_strength": -0.6919133730671743
     },
     "slv_1wk_16c_2013-12-02 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 71.86372544762577,
-        "colored_pixels_ratio_scaled": 0.11425588544961751
+        "trend_strength": 72.72819753948961
     },
     "slv_1wk_16c_2013-12-16 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 97.29867178680549,
-        "colored_pixels_ratio_scaled": -0.2067483533296237
+        "trend_strength": 101.30607409386572
     },
     "slv_1wk_16c_2013-12-30 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 39.544131900683126,
-        "colored_pixels_ratio_scaled": -0.060837335702695894
+        "trend_strength": 36.41526776426133
     },
     "slv_1wk_16c_2014-01-13 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 27.47799442801145,
-        "colored_pixels_ratio_scaled": 0.11425588544961751
+        "trend_strength": 24.131822206185127
     },
     "slv_1wk_16c_2014-01-27 00-00-00.png": {
         "shape": "npnn",
-        "trend_strength": 50.842455300878306,
-        "colored_pixels_ratio_scaled": 0.08507368192423193
+        "trend_strength": 47.562798712504595
     },
     "slv_1wk_16c_2014-02-10 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 20.406755138972102,
-        "colored_pixels_ratio_scaled": 0.697899955957329
+        "trend_strength": 15.861589900767191
     },
     "slv_1wk_16c_2014-02-24 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": 5.891307720742423,
-        "colored_pixels_ratio_scaled": 1.5733660617188963
+        "trend_strength": 3.6282696373665244
     },
     "slv_1wk_16c_2014-03-10 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -42.59089136341775,
-        "colored_pixels_ratio_scaled": 1.4858194511427396
+        "trend_strength": -28.51313254935726
     },
     "slv_1wk_16c_2014-03-24 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -1.2769911545021195,
-        "colored_pixels_ratio_scaled": 2.0986457251758366
+        "trend_strength": -0.7662494380340269
     },
     "slv_1wk_16c_2014-04-07 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -11.782615441484847,
-        "colored_pixels_ratio_scaled": 2.0110991145996797
+        "trend_strength": -7.061038216618212
     },
     "slv_1wk_16c_2014-04-21 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 12.317511697240922,
-        "colored_pixels_ratio_scaled": 2.069463521650451
+        "trend_strength": 7.114822820941028
     },
     "slv_1wk_16c_2014-05-05 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 14.40476833339207,
-        "colored_pixels_ratio_scaled": 1.865188096972752
+        "trend_strength": 9.320874566948293
     },
     "slv_1wk_16c_2014-05-19 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": -1.1197737906582659,
-        "colored_pixels_ratio_scaled": 1.6025482652442817
+        "trend_strength": -0.7259321156762848
     },
     "slv_1wk_16c_2014-06-02 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 100.96365350992343,
-        "colored_pixels_ratio_scaled": 0.5811711418557868
+        "trend_strength": 95.75449149983268
     },
     "slv_1wk_16c_2014-06-16 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 14.120670393115137,
-        "colored_pixels_ratio_scaled": 1.456637247617354
+        "trend_strength": 9.197784693341054
     },
     "slv_1wk_16c_2014-06-30 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": 5.512567115802028,
-        "colored_pixels_ratio_scaled": 1.4858194511427396
+        "trend_strength": 3.5914536249247777
     },
     "slv_1wk_16c_2014-07-14 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -28.093805399046634,
-        "colored_pixels_ratio_scaled": 0.7854465665334858
+        "trend_strength": -22.57943974109212
     },
     "slv_1wk_16c_2014-07-28 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": -9.371807422207505,
-        "colored_pixels_ratio_scaled": 0.9897219912111848
+        "trend_strength": -7.42585852447682
     },
     "slv_1wk_16c_2014-08-11 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": 0.0,
-        "colored_pixels_ratio_scaled": 1.0189041947365702
+        "trend_strength": 0.0
     },
     "slv_1wk_16c_2014-08-25 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": 3.6723062628785685,
-        "colored_pixels_ratio_scaled": 0.7270821594827146
+        "trend_strength": 2.983603871441579
     },
     "slv_1wk_16c_2014-09-08 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 13.204370972276065,
-        "colored_pixels_ratio_scaled": 0.7562643630081002
+        "trend_strength": 10.812813269045476
     },
     "slv_1wk_16c_2014-09-22 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 28.15434801540236,
-        "colored_pixels_ratio_scaled": -0.14838394627885254
+        "trend_strength": 30.32915058917587
     },
     "slv_1wk_16c_2014-10-06 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 133.45523935746024,
-        "colored_pixels_ratio_scaled": -0.6736636097357929
+        "trend_strength": 180.4824045420629
     },
     "slv_1wk_16c_2014-10-20 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 127.75847104488079,
-        "colored_pixels_ratio_scaled": -0.732028016786564
+        "trend_strength": 179.12374954312327
     },
     "slv_1wk_16c_2014-11-03 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 217.80883423898842,
-        "colored_pixels_ratio_scaled": -0.8487568308881064
+        "trend_strength": 273.4784261238659
     },
     "slv_1wk_16c_2014-11-17 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 158.56121691690888,
-        "colored_pixels_ratio_scaled": -0.4402059815327084
+        "trend_strength": 184.74087060893555
     },
     "slv_1wk_16c_2014-12-01 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 91.21101139500564,
-        "colored_pixels_ratio_scaled": 0.20180249602577427
+        "trend_strength": 96.24105370733137
     },
     "slv_1wk_16c_2014-12-15 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 78.96972290164193,
-        "colored_pixels_ratio_scaled": 0.9313575841604136
+        "trend_strength": 67.88813042863572
     },
     "slv_1wk_16c_2014-12-29 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 70.61452125121987,
-        "colored_pixels_ratio_scaled": 1.2231796194142694
+        "trend_strength": 52.11487336566917
     },
     "slv_1wk_16c_2015-01-12 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": -4.065553682922925,
-        "colored_pixels_ratio_scaled": 3.5869381049705007
+        "trend_strength": -1.6375258231469803
     },
     "slv_1wk_16c_2015-01-26 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": 2.35652308829697,
-        "colored_pixels_ratio_scaled": 2.5071965745312346
+        "trend_strength": 1.2621855848969101
     },
     "slv_1wk_16c_2015-02-09 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -2.553982309004239,
-        "colored_pixels_ratio_scaled": 2.79901860978509
+        "trend_strength": -1.3629106063817105
     },
     "slv_1wk_16c_2015-02-23 00-00-00.png": {
         "shape": "nnnp",
-        "trend_strength": -19.347345689588295,
-        "colored_pixels_ratio_scaled": 2.419649963955078
+        "trend_strength": -10.23401580149643
     },
     "slv_1wk_16c_2015-03-09 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": 19.8452416168873,
-        "colored_pixels_ratio_scaled": 2.215374539277379
+        "trend_strength": 10.758207410194462
     },
     "slv_1wk_16c_2015-03-23 00-00-00.png": {
         "shape": "pnpn",
-        "trend_strength": -13.437285487899189,
-        "colored_pixels_ratio_scaled": 2.069463521650451
+        "trend_strength": -7.558628552149378
     },
     "slv_1wk_16c_2015-04-06 00-00-00.png": {
         "shape": "pppn",
-        "trend_strength": -10.242712423899684,
-        "colored_pixels_ratio_scaled": 1.6609126722950531
+        "trend_strength": -6.228927380728912
     },
     "slv_1wk_16c_2015-04-20 00-00-00.png": {
         "shape": "npnn",
-        "trend_strength": 8.032977790463574,
-        "colored_pixels_ratio_scaled": 1.719277079345824
+        "trend_strength": 5.455732793493174
     },
     "slv_1wk_16c_2015-05-04 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 36.148400057086086,
-        "colored_pixels_ratio_scaled": 0.9605397876857992
+        "trend_strength": 27.82423724681519
     },
     "slv_1wk_16c_2015-05-18 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": 1.200397361116006,
-        "colored_pixels_ratio_scaled": 2.1861923357519935
+        "trend_strength": 0.6701504706893481
     },
     "slv_1wk_16c_2015-06-01 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": 13.388296317439291,
-        "colored_pixels_ratio_scaled": 2.3612855569043067
+        "trend_strength": 7.840968628329562
     },
     "slv_1wk_16c_2015-06-15 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": 14.40476833339207,
-        "colored_pixels_ratio_scaled": 2.27373894632815
+        "trend_strength": 8.136834370851464
     },
     "slv_1wk_16c_2015-06-29 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 3.359321371974797,
-        "colored_pixels_ratio_scaled": 2.0986457251758366
+        "trend_strength": 1.833249462275036
     },
     "slv_1wk_16c_2015-07-13 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 49.802655025582666,
-        "colored_pixels_ratio_scaled": 0.5228067348050156
+        "trend_strength": 40.77303686731372
     },
     "slv_1wk_16c_2015-07-27 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 42.59089136341775,
-        "colored_pixels_ratio_scaled": -0.0024729286519247218
+        "trend_strength": 41.510765763980736
     },
     "slv_1wk_16c_2015-08-10 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 23.29934354936867,
-        "colored_pixels_ratio_scaled": -0.060837335702695894
+        "trend_strength": 23.19159735139729
     },
     "slv_1wk_16c_2015-08-24 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 67.99592991484639,
-        "colored_pixels_ratio_scaled": -0.2942949639057806
+        "trend_strength": 73.51599939232052
     },
     "slv_1wk_16c_2015-09-07 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 77.25791932691979,
-        "colored_pixels_ratio_scaled": -0.732028016786564
+        "trend_strength": 87.43267258171966
     },
     "slv_1wk_16c_2015-09-21 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 37.53150832159033,
-        "colored_pixels_ratio_scaled": -0.2651127603803949
+        "trend_strength": 32.87489450940259
     },
     "slv_1wk_16c_2015-10-05 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 7.966554107477533,
-        "colored_pixels_ratio_scaled": 0.3477135136527021
+        "trend_strength": 5.3073703568332835
     },
     "slv_1wk_16c_2015-10-19 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -8.568714613383326,
-        "colored_pixels_ratio_scaled": 0.40607792070347326
+        "trend_strength": -5.793338053405211
     },
     "slv_1wk_16c_2015-11-02 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": 2.824580850048795,
-        "colored_pixels_ratio_scaled": 0.49362453127963
+        "trend_strength": 2.126438993533508
     },
     "slv_1wk_16c_2015-11-16 00-00-00.png": {
         "shape": "nnnp",
-        "trend_strength": 18.005960416740088,
-        "colored_pixels_ratio_scaled": 0.7270821594827146
+        "trend_strength": 12.38452533513139
     },
     "slv_1wk_16c_2015-11-30 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 24.635023394481845,
-        "colored_pixels_ratio_scaled": 0.7270821594827146
+        "trend_strength": 16.711253601690803
     },
     "slv_1wk_16c_2015-12-14 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 11.380791582110762,
-        "colored_pixels_ratio_scaled": 0.7562643630081002
+        "trend_strength": 8.399174645116828
     },
     "slv_1wk_16c_2015-12-28 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 16.805563055624084,
-        "colored_pixels_ratio_scaled": 0.8146287700588714
+        "trend_strength": 13.196597564498662
     },
     "slv_1wk_16c_2016-01-11 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 23.519641967243285,
-        "colored_pixels_ratio_scaled": 0.46444232775424443
+        "trend_strength": 20.802374505553008
     },
     "slv_1wk_16c_2016-01-25 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 57.70378829882404,
-        "colored_pixels_ratio_scaled": -0.03165513217731042
+        "trend_strength": 58.47326149960243
     },
     "slv_1wk_16c_2016-02-08 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 6.336772076615038,
-        "colored_pixels_ratio_scaled": 0.7270821594827146
+        "trend_strength": 4.637846124073695
     },
     "slv_1wk_16c_2016-02-22 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -1.178261544148485,
-        "colored_pixels_ratio_scaled": 0.8146287700588714
+        "trend_strength": -0.8770699044657663
     },
     "slv_1wk_16c_2016-03-07 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -48.73288494548874,
-        "colored_pixels_ratio_scaled": 1.1356330088381126
+        "trend_strength": -34.525555411838226
     },
     "slv_1wk_16c_2016-03-21 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -23.519641967243285,
-        "colored_pixels_ratio_scaled": 1.1356330088381126
+        "trend_strength": -16.820524644919427
     },
     "slv_1wk_16c_2016-04-04 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -34.81152347236417,
-        "colored_pixels_ratio_scaled": 1.048086398261956
+        "trend_strength": -23.857596953842116
     },
     "slv_1wk_16c_2016-04-18 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -80.58134989963462,
-        "colored_pixels_ratio_scaled": 0.3477135136527021
+        "trend_strength": -78.78485224637359
     },
     "slv_1wk_16c_2016-05-02 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -91.14423715308634,
-        "colored_pixels_ratio_scaled": 0.3185313101273166
+        "trend_strength": -92.67471438547071
     },
     "slv_1wk_16c_2016-05-16 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -57.47171408844271,
-        "colored_pixels_ratio_scaled": 0.9313575841604136
+        "trend_strength": -49.13252116300056
     },
     "slv_1wk_16c_2016-05-30 00-00-00.png": {
         "shape": "nnnp",
-        "trend_strength": -23.741661896520156,
-        "colored_pixels_ratio_scaled": 0.902175380635028
+        "trend_strength": -18.16970370612471
     },
     "slv_1wk_16c_2016-06-13 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -63.65330855656185,
-        "colored_pixels_ratio_scaled": 1.3690906370411973
+        "trend_strength": -44.354452267821
     },
     "slv_1wk_16c_2016-06-27 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -67.78994040117108,
-        "colored_pixels_ratio_scaled": 0.43526012422885885
+        "trend_strength": -66.27233564680736
     },
     "slv_1wk_16c_2016-07-11 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -88.91085525346018,
-        "colored_pixels_ratio_scaled": 0.17262029250038868
+        "trend_strength": -100.08524353857314
     },
     "slv_1wk_16c_2016-07-25 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": -88.72623218658127,
-        "colored_pixels_ratio_scaled": 0.902175380635028
+        "trend_strength": -78.47760804975758
     },
     "slv_1wk_16c_2016-08-08 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -51.04285131736285,
-        "colored_pixels_ratio_scaled": 0.6687177524319434
+        "trend_strength": -48.22636210278204
     },
     "slv_1wk_16c_2016-08-22 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -29.090567930026648,
-        "colored_pixels_ratio_scaled": 0.5228067348050156
+        "trend_strength": -28.183723516153883
     },
     "slv_1wk_16c_2016-09-05 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -52.54411165022647,
-        "colored_pixels_ratio_scaled": 0.697899955957329
+        "trend_strength": -49.644784517569754
     },
     "slv_1wk_16c_2016-09-19 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -61.586163060220734,
-        "colored_pixels_ratio_scaled": 1.0772686017873414
+        "trend_strength": -49.774468852636055
     },
     "slv_1wk_16c_2016-10-03 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": -1.0862054148550107,
-        "colored_pixels_ratio_scaled": 2.2445567428027644
+        "trend_strength": -0.6069211294043555
     },
     "slv_1wk_16c_2016-10-17 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 60.050413314544535,
-        "colored_pixels_ratio_scaled": 1.1939974158888838
+        "trend_strength": 47.81802837731285
     },
     "slv_1wk_16c_2016-10-31 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 40.385528818905684,
-        "colored_pixels_ratio_scaled": 1.252361822939655
+        "trend_strength": 32.06868068215686
     },
     "slv_1wk_16c_2016-11-14 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 101.66087990151938,
-        "colored_pixels_ratio_scaled": 0.8146287700588714
+        "trend_strength": 92.68223424220436
     },
     "slv_1wk_16c_2016-11-28 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 73.56175631031705,
-        "colored_pixels_ratio_scaled": 0.7270821594827146
+        "trend_strength": 65.11305421988622
     },
     "slv_1wk_16c_2016-12-12 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 62.069842346755216,
-        "colored_pixels_ratio_scaled": 0.7562643630081002
+        "trend_strength": 56.5480025653259
     },
     "slv_1wk_16c_2016-12-26 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 72.13522218676958,
-        "colored_pixels_ratio_scaled": 0.1434380889750031
+        "trend_strength": 74.92481133737135
     },
     "slv_1wk_16c_2017-01-09 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 72.52321490967117,
-        "colored_pixels_ratio_scaled": 0.697899955957329
+        "trend_strength": 67.21492925921635
     },
     "slv_1wk_16c_2017-01-23 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 9.996489219587435,
-        "colored_pixels_ratio_scaled": 0.289349106601931
+        "trend_strength": 8.649015923455732
     },
     "slv_1wk_16c_2017-02-06 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": -1.178261544148485,
-        "colored_pixels_ratio_scaled": 0.5811711418557868
+        "trend_strength": -0.9301701700806039
     },
     "slv_1wk_16c_2017-02-20 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -1.9427059979934242,
-        "colored_pixels_ratio_scaled": 0.5228067348050156
+        "trend_strength": -1.3487136208985677
     },
     "slv_1wk_16c_2017-03-06 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": -13.51134299577252,
-        "colored_pixels_ratio_scaled": 0.8438109735842569
+        "trend_strength": -11.204697773618872
     },
     "slv_1wk_16c_2017-03-20 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -38.83223924894778,
-        "colored_pixels_ratio_scaled": 1.1939974158888838
+        "trend_strength": -30.951191953932483
     },
     "slv_1wk_16c_2017-04-03 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -63.05293398027177,
-        "colored_pixels_ratio_scaled": 0.5811711418557868
+        "trend_strength": -57.25769963797461
     },
     "slv_1wk_16c_2017-04-17 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -70.55923564458982,
-        "colored_pixels_ratio_scaled": 1.456637247617354
+        "trend_strength": -52.78701922648558
     },
     "slv_1wk_16c_2017-05-01 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": 20.579868838677843,
-        "colored_pixels_ratio_scaled": 2.215374539277379
+        "trend_strength": 10.856596115621683
     },
     "slv_1wk_16c_2017-05-15 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 11.492920390519076,
-        "colored_pixels_ratio_scaled": 2.069463521650451
+        "trend_strength": 7.353762810646949
     },
     "slv_1wk_16c_2017-05-29 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 13.066467759579602,
-        "colored_pixels_ratio_scaled": 2.0110991145996797
+        "trend_strength": 8.577516216484181
     },
     "slv_1wk_16c_2017-06-12 00-00-00.png": {
         "shape": "ppnn",
-        "trend_strength": 53.731129555282465,
-        "colored_pixels_ratio_scaled": 2.127827928701222
+        "trend_strength": 33.72838553135746
     },
     "slv_1wk_16c_2017-06-26 00-00-00.png": {
         "shape": "npnn",
-        "trend_strength": 12.769911545021197,
-        "colored_pixels_ratio_scaled": 1.252361822939655
+        "trend_strength": 9.47389080045823
     },
     "slv_1wk_16c_2017-07-10 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 61.55167364740816,
-        "colored_pixels_ratio_scaled": 0.697899955957329
+        "trend_strength": 57.63723153185238
     },
     "slv_1wk_16c_2017-07-24 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 34.172370539074045,
-        "colored_pixels_ratio_scaled": 0.7854465665334858
+        "trend_strength": 31.776557072704012
     },
     "slv_1wk_16c_2017-08-07 00-00-00.png": {
         "shape": "pppn",
-        "trend_strength": 22.212995191285327,
-        "colored_pixels_ratio_scaled": 1.6900948758204386
+        "trend_strength": 15.60685859213721
     },
     "slv_1wk_16c_2017-08-21 00-00-00.png": {
         "shape": "pppn",
-        "trend_strength": -20.83562862391639,
-        "colored_pixels_ratio_scaled": 1.0772686017873414
+        "trend_strength": -14.811381043932037
     },
     "slv_1wk_16c_2017-09-04 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -25.46576831812003,
-        "colored_pixels_ratio_scaled": 0.9897219912111848
+        "trend_strength": -19.432800616823307
     },
     "slv_1wk_16c_2017-09-18 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": 17.137429226766653,
-        "colored_pixels_ratio_scaled": 1.048086398261956
+        "trend_strength": 13.443364570173554
     },
     "slv_1wk_16c_2017-10-02 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -5.4955988856022895,
-        "colored_pixels_ratio_scaled": 0.7854465665334858
+        "trend_strength": -4.764882091667127
     },
     "slv_1wk_16c_2017-10-16 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -24.008937225414755,
-        "colored_pixels_ratio_scaled": 1.2231796194142694
+        "trend_strength": -19.421476140939376
     },
     "slv_1wk_16c_2017-10-30 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -23.8996623224326,
-        "colored_pixels_ratio_scaled": 1.7484592828712096
+        "trend_strength": -14.5581081451852
     },
     "slv_1wk_16c_2017-11-13 00-00-00.png": {
         "shape": "pppn",
-        "trend_strength": -16.205488929712747,
-        "colored_pixels_ratio_scaled": 1.6900948758204386
+        "trend_strength": -9.820908518594951
     },
     "slv_1wk_16c_2017-11-27 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 28.093805399046634,
-        "colored_pixels_ratio_scaled": 1.0772686017873414
+        "trend_strength": 19.69695807201653
     },
     "slv_1wk_16c_2017-12-11 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 46.73718294178808,
-        "colored_pixels_ratio_scaled": 0.7270821594827146
+        "trend_strength": 41.60168468826219
     },
     "slv_1wk_16c_2017-12-25 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 37.53150832159033,
-        "colored_pixels_ratio_scaled": 1.0772686017873414
+        "trend_strength": 29.71741876556166
     },
     "slv_1wk_16c_2018-01-08 00-00-00.png": {
         "shape": "pppn",
-        "trend_strength": -13.230161077924866,
-        "colored_pixels_ratio_scaled": 1.5733660617188963
+        "trend_strength": -7.778562973007812
     },
     "slv_1wk_16c_2018-01-22 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": -16.53770134740608,
-        "colored_pixels_ratio_scaled": 1.4274550440919684
+        "trend_strength": -10.187002189948476
     },
     "slv_1wk_16c_2018-02-05 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": 21.27570202250705,
-        "colored_pixels_ratio_scaled": 1.7484592828712096
+        "trend_strength": 12.486498477667846
     },
     "slv_1wk_16c_2018-02-19 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 12.518870740321837,
-        "colored_pixels_ratio_scaled": 1.806823689921981
+        "trend_strength": 7.477843532994967
     },
     "slv_1wk_16c_2018-03-05 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": 20.406755138972102,
-        "colored_pixels_ratio_scaled": 1.7484592828712096
+        "trend_strength": 12.689271920613754
     },
     "slv_1wk_16c_2018-03-19 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -4.896408350504758,
-        "colored_pixels_ratio_scaled": 1.3982728405665827
+        "trend_strength": -3.242455348872584
     },
     "slv_1wk_16c_2018-04-02 00-00-00.png": {
         "shape": "pnpn",
-        "trend_strength": -11.380791582110762,
-        "colored_pixels_ratio_scaled": 2.1861923357519935
+        "trend_strength": -6.0286339501483255
     },
     "slv_1wk_16c_2018-04-16 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 0.0,
-        "colored_pixels_ratio_scaled": 2.215374539277379
+        "trend_strength": 0.0
     },
     "slv_1wk_16c_2018-04-30 00-00-00.png": {
         "shape": "npnn",
-        "trend_strength": 27.78083816522185,
-        "colored_pixels_ratio_scaled": 2.3612855569043067
+        "trend_strength": 14.407372037185855
     },
     "slv_1wk_16c_2018-05-14 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 44.100536926416225,
-        "colored_pixels_ratio_scaled": 3.1492050520897172
+        "trend_strength": 19.328550417776988
     },
     "slv_1wk_16c_2018-05-28 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 3.212303972483858,
-        "colored_pixels_ratio_scaled": 1.865188096972752
+        "trend_strength": 1.5979695559000755
     },
     "slv_1wk_16c_2018-06-11 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": 4.28307196331181,
-        "colored_pixels_ratio_scaled": 2.157010132226608
+        "trend_strength": 2.009118221476487
     },
     "slv_1wk_16c_2018-06-25 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 20.48542484779937,
-        "colored_pixels_ratio_scaled": 1.719277079345824
+        "trend_strength": 11.271392403223745
     },
     "slv_1wk_16c_2018-07-09 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 39.83277053738767,
-        "colored_pixels_ratio_scaled": 1.3399084335158116
+        "trend_strength": 24.384027715583375
     },
     "slv_1wk_16c_2018-07-23 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 36.23727342100445,
-        "colored_pixels_ratio_scaled": 0.23098469955115986
+        "trend_strength": 31.14596173754333
     },
     "slv_1wk_16c_2018-08-06 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 55.218278611336274,
-        "colored_pixels_ratio_scaled": -0.03165513217731042
+        "trend_strength": 49.5691111066229
     },
     "slv_1wk_16c_2018-08-20 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 58.01857192773693,
-        "colored_pixels_ratio_scaled": -0.8195746273627209
+        "trend_strength": 77.70804360752034
     },
     "slv_1wk_16c_2018-09-03 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 90.66123988646186,
-        "colored_pixels_ratio_scaled": -1.02385005204042
+        "trend_strength": 138.5460530361753
     },
     "slv_1wk_16c_2018-09-17 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 121.85043593507241,
-        "colored_pixels_ratio_scaled": -0.8487568308881064
+        "trend_strength": 167.60999957249052
     },
     "slv_1wk_16c_2018-10-01 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 77.16791210677675,
-        "colored_pixels_ratio_scaled": -0.4402059815327084
+        "trend_strength": 94.53840237917578
     },
     "slv_1wk_16c_2018-10-15 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 63.09985649059823,
-        "colored_pixels_ratio_scaled": -0.11920174275346707
+        "trend_strength": 68.51194095949468
     },
     "slv_1wk_16c_2018-10-29 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 48.08649024902004,
-        "colored_pixels_ratio_scaled": 0.11425588544961751
+        "trend_strength": 42.68971808757206
     },
     "slv_1wk_16c_2018-11-12 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 54.8920149015011,
-        "colored_pixels_ratio_scaled": 0.9897219912111848
+        "trend_strength": 39.752867830724604
     },
     "slv_1wk_16c_2018-11-26 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 64.87741064418805,
-        "colored_pixels_ratio_scaled": 2.157010132226608
+        "trend_strength": 35.09107620919728
     },
     "slv_1wk_16c_2018-12-10 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": 17.363023853263655,
-        "colored_pixels_ratio_scaled": 3.0032940344627894
+        "trend_strength": 7.692324673290139
     },
     "slv_1wk_16c_2018-12-24 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -58.81947069468429,
-        "colored_pixels_ratio_scaled": 1.806823689921981
+        "trend_strength": -34.65886062971952
     },
     "slv_1wk_16c_2019-01-07 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -60.45158774162519,
-        "colored_pixels_ratio_scaled": 0.9897219912111848
+        "trend_strength": -47.202397929115456
     },
     "slv_1wk_16c_2019-01-21 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": -69.81736303206395,
-        "colored_pixels_ratio_scaled": 1.2231796194142694
+        "trend_strength": -54.67218546742633
     },
     "slv_1wk_16c_2019-02-04 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -61.34708269919272,
-        "colored_pixels_ratio_scaled": 0.46444232775424443
+        "trend_strength": -60.1140928171933
     },
     "slv_1wk_16c_2019-02-18 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -69.8637534089405,
-        "colored_pixels_ratio_scaled": 0.43526012422885885
+        "trend_strength": -70.13310828672552
     },
     "slv_1wk_16c_2019-03-04 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -34.47876117155723,
-        "colored_pixels_ratio_scaled": 0.8146287700588714
+        "trend_strength": -28.946658706877795
     },
     "slv_1wk_16c_2019-03-18 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -40.164888952317874,
-        "colored_pixels_ratio_scaled": 1.2815440264650406
+        "trend_strength": -30.509032068876305
     },
     "slv_1wk_16c_2019-04-01 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -22.807549861204112,
-        "colored_pixels_ratio_scaled": 1.9235525040235233
+        "trend_strength": -14.205225368113785
     },
     "slv_1wk_16c_2019-04-15 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 21.208707794672726,
-        "colored_pixels_ratio_scaled": 2.419649963955078
+        "trend_strength": 11.656870939585707
     },
     "slv_1wk_16c_2019-04-29 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 40.95642232570753,
-        "colored_pixels_ratio_scaled": 1.1356330088381126
+        "trend_strength": 30.833365406235874
     },
     "slv_1wk_16c_2019-05-13 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 71.86372544762577,
-        "colored_pixels_ratio_scaled": 0.43526012422885885
+        "trend_strength": 66.21522462550546
     },
     "slv_1wk_16c_2019-05-27 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 73.74507304277051,
-        "colored_pixels_ratio_scaled": 0.3185313101273166
+        "trend_strength": 72.35451895644081
     },
     "slv_1wk_16c_2019-06-10 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 70.45765888010052,
-        "colored_pixels_ratio_scaled": 0.9313575841604136
+        "trend_strength": 58.37669129068482
     },
     "slv_1wk_16c_2019-06-24 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 2.276158316422152,
-        "colored_pixels_ratio_scaled": 1.106450805312727
+        "trend_strength": 1.4192197292423379
     },
     "slv_1wk_16c_2019-07-08 00-00-00.png": {
         "shape": "npnn",
-        "trend_strength": 18.361531314392842,
-        "colored_pixels_ratio_scaled": 1.456637247617354
+        "trend_strength": 11.434745916313942
     },
     "slv_1wk_16c_2019-07-22 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -34.987712268556024,
-        "colored_pixels_ratio_scaled": 0.1434380889750031
+        "trend_strength": -32.89120959352637
     },
     "slv_1wk_16c_2019-08-05 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -63.05293398027177,
-        "colored_pixels_ratio_scaled": -0.2942949639057806
+        "trend_strength": -71.07323038172184
     },
     "slv_1wk_16c_2019-08-19 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -107.14510168400037,
-        "colored_pixels_ratio_scaled": -0.03165513217731042
+        "trend_strength": -118.81373639162915
     },
     "slv_1wk_16c_2019-09-02 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -72.13522218676958,
-        "colored_pixels_ratio_scaled": -0.6152992026850219
+        "trend_strength": -102.7114963366614
     },
     "slv_1wk_16c_2019-09-16 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -61.55167364740816,
-        "colored_pixels_ratio_scaled": -0.4110237780073227
+        "trend_strength": -77.02118142202892
     },
     "slv_1wk_16c_2019-09-30 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -45.52020747929359,
-        "colored_pixels_ratio_scaled": 0.1434380889750031
+        "trend_strength": -46.102537348524194
     },
     "slv_1wk_16c_2019-10-14 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -37.94716471641187,
-        "colored_pixels_ratio_scaled": -0.0024729286519247218
+        "trend_strength": -37.53287189001871
     },
     "slv_1wk_16c_2019-10-28 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -47.13046176593939,
-        "colored_pixels_ratio_scaled": 0.1434380889750031
+        "trend_strength": -41.73784650759806
     },
     "slv_1wk_16c_2019-11-11 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -9.775848733695096,
-        "colored_pixels_ratio_scaled": 1.0772686017873414
+        "trend_strength": -6.558847477240315
     },
     "slv_1wk_16c_2019-11-25 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": -1.0862054148550107,
-        "colored_pixels_ratio_scaled": 1.2815440264650406
+        "trend_strength": -0.6887048276928857
     },
     "slv_1wk_16c_2019-12-09 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 17.877876163029676,
-        "colored_pixels_ratio_scaled": 1.2815440264650406
+        "trend_strength": 12.646542603402382
     },
     "slv_1wk_16c_2019-12-23 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 13.465122963888083,
-        "colored_pixels_ratio_scaled": 2.069463521650451
+        "trend_strength": 7.795483967499057
     },
     "slv_1wk_16c_2020-01-06 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 14.139138529781816,
-        "colored_pixels_ratio_scaled": 1.7776414863965952
+        "trend_strength": 8.446474151063681
     },
     "slv_1wk_16c_2020-01-20 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": -23.257939664897602,
-        "colored_pixels_ratio_scaled": 1.5441838581935108
+        "trend_strength": -14.50737280285895
     },
     "slv_1wk_16c_2020-02-03 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": 4.4790951626330635,
-        "colored_pixels_ratio_scaled": 1.7776414863965952
+        "trend_strength": 2.543016852431209
     },
     "slv_1wk_16c_2020-02-17 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -12.317511697240922,
-        "colored_pixels_ratio_scaled": 1.5441838581935108
+        "trend_strength": -7.698603154966959
     },
     "slv_1wk_16c_2020-03-02 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -8.820107385283245,
-        "colored_pixels_ratio_scaled": 1.7484592828712096
+        "trend_strength": -5.387180437387166
     },
     "slv_1wk_16c_2020-03-16 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 40.13288981856191,
-        "colored_pixels_ratio_scaled": -0.38184157448193723
+        "trend_strength": 44.291186644413564
     },
     "slv_1wk_16c_2020-03-30 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 28.15434801540236,
-        "colored_pixels_ratio_scaled": -0.09001953922808159
+        "trend_strength": 31.10904303289753
     },
     "slv_1wk_16c_2020-04-13 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 27.609139305668137,
-        "colored_pixels_ratio_scaled": -0.0024729286519247218
+        "trend_strength": 29.166355430139994
     },
     "slv_1wk_16c_2020-04-27 00-00-00.png": {
         "shape": "npnn",
-        "trend_strength": 30.728137271699055,
-        "colored_pixels_ratio_scaled": -0.09001953922808159
+        "trend_strength": 31.38553464765065
     },
     "slv_1wk_16c_2020-05-11 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 16.53770134740608,
-        "colored_pixels_ratio_scaled": 0.23098469955115986
+        "trend_strength": 15.100430013888273
     },
     "slv_1wk_16c_2020-05-25 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": -1.1025134231604057,
-        "colored_pixels_ratio_scaled": 0.26016690307654544
+        "trend_strength": -0.9892093110834996
     },
     "slv_1wk_16c_2020-06-08 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": 13.656949898532913,
-        "colored_pixels_ratio_scaled": 0.3185313101273166
+        "trend_strength": 12.167671799142743
     },
     "slv_1wk_16c_2020-06-22 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -10.803576250044053,
-        "colored_pixels_ratio_scaled": 0.11425588544961751
+        "trend_strength": -10.459437093164128
     },
     "slv_1wk_16c_2020-07-06 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -151.2243126653691,
-        "colored_pixels_ratio_scaled": -0.32347716743116606
+        "trend_strength": -178.80089145626727
     },
     "slv_1wk_16c_2020-07-20 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -90.0756199718168,
-        "colored_pixels_ratio_scaled": -0.7612102203119497
+        "trend_strength": -131.95776472066822
     },
     "slv_1wk_16c_2020-08-03 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -74.97445937766004,
-        "colored_pixels_ratio_scaled": -0.9654856449896487
+        "trend_strength": -122.1673499188122
     },
     "slv_1wk_16c_2020-08-17 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -85.55572864012206,
-        "colored_pixels_ratio_scaled": -0.7028458132611786
+        "trend_strength": -128.6357510633647
     },
     "slv_1wk_16c_2020-08-31 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -73.56175631031705,
-        "colored_pixels_ratio_scaled": -0.4402059815327084
+        "trend_strength": -92.60090046241305
     },
     "slv_1wk_16c_2020-09-14 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -60.45158774162519,
-        "colored_pixels_ratio_scaled": -0.38184157448193723
+        "trend_strength": -71.9733356178641
     },
     "slv_1wk_16c_2020-09-28 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -42.485079183246604,
-        "colored_pixels_ratio_scaled": 0.026709274873460864
+        "trend_strength": -42.821545332367165
     },
     "slv_1wk_16c_2020-10-12 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -41.61947097929044,
-        "colored_pixels_ratio_scaled": 0.3768957171780877
+        "trend_strength": -36.664119252399786
     },
     "slv_1wk_16c_2020-10-26 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -30.009934027900147,
-        "colored_pixels_ratio_scaled": 0.7854465665334858
+        "trend_strength": -23.23143079059734
     },
     "slv_1wk_16c_2020-11-09 00-00-00.png": {
         "shape": "ppnn",
-        "trend_strength": -3.6011920833480175,
-        "colored_pixels_ratio_scaled": 1.806823689921981
+        "trend_strength": -2.135130569405597
     },
     "slv_1wk_16c_2020-11-23 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 61.205104381309475,
-        "colored_pixels_ratio_scaled": 1.2815440264650406
+        "trend_strength": 41.236801475208814
     },
     "slv_1wk_16c_2020-12-07 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 33.61112611124817,
-        "colored_pixels_ratio_scaled": 1.3982728405665827
+        "trend_strength": 22.315079909412667
     },
     "slv_1wk_16c_2020-12-21 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 7.069569264890908,
-        "colored_pixels_ratio_scaled": 2.3612855569043067
+        "trend_strength": 3.8575888438840624
     },
     "slv_1wk_16c_2021-01-04 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": 10.215929236016956,
-        "colored_pixels_ratio_scaled": 2.711471999208934
+        "trend_strength": 5.571954534228125
     },
     "slv_1wk_16c_2021-01-18 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": -20.431858472033912,
-        "colored_pixels_ratio_scaled": 1.7776414863965952
+        "trend_strength": -12.824339801001239
     },
     "slv_1wk_16c_2021-02-01 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -21.708849626536033,
-        "colored_pixels_ratio_scaled": 1.0772686017873414
+        "trend_strength": -16.35103324627658
     },
     "slv_1wk_16c_2021-02-15 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -34.34749303501431,
-        "colored_pixels_ratio_scaled": 0.9313575841604136
+        "trend_strength": -27.720596160761076
     },
     "slv_1wk_16c_2021-03-01 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -5.226587103831841,
-        "colored_pixels_ratio_scaled": 1.1356330088381126
+        "trend_strength": -3.957354072605202
     },
     "slv_1wk_16c_2021-03-15 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -37.94716471641187,
-        "colored_pixels_ratio_scaled": 0.8438109735842569
+        "trend_strength": -29.233770735054414
     },
     "slv_1wk_16c_2021-03-29 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": -9.505158114922557,
-        "colored_pixels_ratio_scaled": 1.2231796194142694
+        "trend_strength": -5.80337813431211
     },
     "slv_1wk_16c_2021-04-12 00-00-00.png": {
         "shape": "pnpn",
-        "trend_strength": 6.517232489130064,
-        "colored_pixels_ratio_scaled": 1.0189041947365702
+        "trend_strength": 4.276288324610505
     },
     "slv_1wk_16c_2021-04-26 00-00-00.png": {
         "shape": "pppn",
-        "trend_strength": -13.230161077924866,
-        "colored_pixels_ratio_scaled": 0.49362453127963
+        "trend_strength": -9.823031269814793
     },
     "slv_1wk_16c_2021-05-10 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": -19.678093700365476,
-        "colored_pixels_ratio_scaled": 0.8146287700588714
+        "trend_strength": -14.455726838554932
     },
     "slv_1wk_16c_2021-05-24 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -6.945209541305463,
-        "colored_pixels_ratio_scaled": 0.46444232775424443
+        "trend_strength": -5.183490638129243
     },
     "slv_1wk_16c_2021-06-07 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -5.2806433971791975,
-        "colored_pixels_ratio_scaled": 0.6103533453811723
+        "trend_strength": -3.587201371047292
     },
     "slv_1wk_16c_2021-06-21 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -15.535194675268372,
-        "colored_pixels_ratio_scaled": 0.3768957171780877
+        "trend_strength": -13.380140138851763
     },
     "slv_1wk_16c_2021-07-05 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -8.243398328403435,
-        "colored_pixels_ratio_scaled": 0.46444232775424443
+        "trend_strength": -6.955349582154598
     },
     "slv_1wk_16c_2021-07-19 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -7.202384166696035,
-        "colored_pixels_ratio_scaled": 1.1648152123634983
+        "trend_strength": -4.773515484459654
     },
     "slv_1wk_16c_2021-08-02 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 31.070389350536743,
-        "colored_pixels_ratio_scaled": 0.7562643630081002
+        "trend_strength": 24.41557000575236
     },
     "slv_1wk_16c_2021-08-16 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 60.050413314544535,
-        "colored_pixels_ratio_scaled": 0.026709274873460864
+        "trend_strength": 59.97130399815009
     },
     "slv_1wk_16c_2021-08-30 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 70.55599223633743,
-        "colored_pixels_ratio_scaled": -0.0024729286519247218
+        "trend_strength": 73.53762810646947
     },
     "slv_1wk_16c_2021-09-13 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 136.70223495790378,
-        "colored_pixels_ratio_scaled": 0.20180249602577427
+        "trend_strength": 141.79084936229287
     },
     "slv_1wk_16c_2021-09-27 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 125.15115530927098,
-        "colored_pixels_ratio_scaled": -0.09001953922808159
+        "trend_strength": 135.96485914674088
     },
     "slv_1wk_16c_2021-10-11 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 64.38159943909982,
-        "colored_pixels_ratio_scaled": 0.23098469955115986
+        "trend_strength": 63.56627486484174
     },
     "slv_1wk_16c_2021-10-25 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 40.72679510203731,
-        "colored_pixels_ratio_scaled": 0.5228067348050156
+        "trend_strength": 35.200418167478496
     },
     "slv_1wk_16c_2021-11-08 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": -1.2495611524484294,
-        "colored_pixels_ratio_scaled": 1.1648152123634983
+        "trend_strength": -0.8710684486189819
     },
     "slv_1wk_16c_2021-11-22 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": 13.890419082610926,
-        "colored_pixels_ratio_scaled": 1.8943703004981376
+        "trend_strength": 8.102741995952421
     },
     "slv_1wk_16c_2021-12-06 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 27.10001551541515,
-        "colored_pixels_ratio_scaled": 1.7776414863965952
+        "trend_strength": 16.163540636873837
     },
     "slv_1wk_16c_2021-12-20 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 29.45653860371212,
-        "colored_pixels_ratio_scaled": 1.4858194511427396
+        "trend_strength": 18.17094255581604
     },
     "slv_1wk_16c_2022-01-03 00-00-00.png": {
         "shape": "pnpn",
-        "trend_strength": 1.1575349235509105,
-        "colored_pixels_ratio_scaled": 1.048086398261956
+        "trend_strength": 0.7514261602149163
     },
     "slv_1wk_16c_2022-01-17 00-00-00.png": {
         "shape": "pppn",
-        "trend_strength": -33.738151116107595,
-        "colored_pixels_ratio_scaled": 1.6025482652442817
+        "trend_strength": -21.558944103319803
     },
     "slv_1wk_16c_2022-01-31 00-00-00.png": {
         "shape": "npnn",
-        "trend_strength": 17.137429226766653,
-        "colored_pixels_ratio_scaled": 1.8360058934473664
+        "trend_strength": 10.323331359961935
     },
     "slv_1wk_16c_2022-02-14 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 2.4991223048968587,
-        "colored_pixels_ratio_scaled": 1.456637247617354
+        "trend_strength": 1.620794028773628
     },
     "slv_1wk_16c_2022-02-28 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -8.102744464856373,
-        "colored_pixels_ratio_scaled": 1.2231796194142694
+        "trend_strength": -5.315351364888671
     },
     "slv_1wk_16c_2022-03-14 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -29.658098925512345,
-        "colored_pixels_ratio_scaled": 0.08507368192423193
+        "trend_strength": -27.682194499528975
     },
     "slv_1wk_16c_2022-03-28 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -35.721392756414886,
-        "colored_pixels_ratio_scaled": 0.17262029250038868
+        "trend_strength": -32.131468113742095
     },
     "slv_1wk_16c_2022-04-11 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -42.485079183246604,
-        "colored_pixels_ratio_scaled": 0.289349106601931
+        "trend_strength": -34.328015679666244
     },
     "slv_1wk_16c_2022-04-25 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -6.945209541305463,
-        "colored_pixels_ratio_scaled": 0.9897219912111848
+        "trend_strength": -4.7562798712504595
     },
     "slv_1wk_16c_2022-05-09 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 34.274858453533305,
-        "colored_pixels_ratio_scaled": 0.11425588544961751
+        "trend_strength": 31.1153931131247
     },
     "slv_1wk_16c_2022-05-23 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 11.29832340019518,
-        "colored_pixels_ratio_scaled": -0.11920174275346707
+        "trend_strength": 11.740942755227834
     },
     "slv_1wk_16c_2022-06-06 00-00-00.png": {
         "shape": "pnpn",
-        "trend_strength": 36.03024798872672,
-        "colored_pixels_ratio_scaled": -0.2067483533296237
+        "trend_strength": 38.64477395390998
     },
     "slv_1wk_16c_2022-06-20 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 69.29996091368577,
-        "colored_pixels_ratio_scaled": -0.2359305568550094
+        "trend_strength": 77.3078933974729
     },
     "slv_1wk_16c_2022-07-04 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 87.63868957027532,
-        "colored_pixels_ratio_scaled": -0.2067483533296237
+        "trend_strength": 104.90825062280273
     },
     "slv_1wk_16c_2022-07-18 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 91.21101139500564,
-        "colored_pixels_ratio_scaled": -0.4693881850580939
+        "trend_strength": 121.33457998071532
     },
     "slv_1wk_16c_2022-08-01 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 84.13314198746431,
-        "colored_pixels_ratio_scaled": -0.060837335702695894
+        "trend_strength": 100.71192059789063
     },
     "slv_1wk_16c_2022-08-15 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": 61.09019265305596,
-        "colored_pixels_ratio_scaled": 1.048086398261956
+        "trend_strength": 49.804114158682886
     },
     "slv_1wk_16c_2022-08-29 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 60.72848827604909,
-        "colored_pixels_ratio_scaled": 1.0772686017873414
+        "trend_strength": 48.933016058226166
     },
     "slv_1wk_16c_2022-09-12 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 41.50371858406181,
-        "colored_pixels_ratio_scaled": 1.106450805312727
+        "trend_strength": 32.12994616091366
     },
     "slv_1wk_16c_2022-09-26 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": 46.71259052761946,
-        "colored_pixels_ratio_scaled": 1.515001654668125
+        "trend_strength": 33.11841224650927
     },
     "slv_1wk_16c_2022-10-10 00-00-00.png": {
         "shape": "pppn",
-        "trend_strength": 59.03428110109643,
-        "colored_pixels_ratio_scaled": 2.3612855569043067
+        "trend_strength": 32.36641478368531
     },
     "slv_1wk_16c_2022-10-24 00-00-00.png": {
         "shape": "npnn",
-        "trend_strength": 0.0,
-        "colored_pixels_ratio_scaled": 1.9819169110742942
+        "trend_strength": 0.0
     },
     "slv_1wk_16c_2022-11-07 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -57.532798118430904,
-        "colored_pixels_ratio_scaled": 2.215374539277379
+        "trend_strength": -34.28309492136159
     },
     "slv_1wk_16c_2022-11-21 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -18.74361484441501,
-        "colored_pixels_ratio_scaled": 1.5733660617188963
+        "trend_strength": -12.99206808742085
     },
     "slv_1wk_16c_2022-12-05 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -80.6275944046533,
-        "colored_pixels_ratio_scaled": 0.697899955957329
+        "trend_strength": -73.35184883546366
     },
     "slv_1wk_16c_2022-12-19 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -99.3316105631826,
-        "colored_pixels_ratio_scaled": 0.49362453127963
+        "trend_strength": -94.21082287877076
     },
     "slv_1wk_16c_2023-01-02 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -72.52321490967117,
-        "colored_pixels_ratio_scaled": 0.5228067348050156
+        "trend_strength": -67.0694423993479
     },
     "slv_1wk_16c_2023-01-16 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -59.025003658400614,
-        "colored_pixels_ratio_scaled": 0.49362453127963
+        "trend_strength": -54.64710013455886
     },
     "slv_1wk_16c_2023-01-30 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -50.842455300878306,
-        "colored_pixels_ratio_scaled": 0.902175380635028
+        "trend_strength": -41.61744887344152
     },
     "slv_1wk_16c_2023-02-13 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -38.73639572590131,
-        "colored_pixels_ratio_scaled": 1.0772686017873414
+        "trend_strength": -28.582549792325878
     },
     "slv_1wk_16c_2023-02-27 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 8.102744464856373,
-        "colored_pixels_ratio_scaled": 2.0986457251758366
+        "trend_strength": 4.442449087956807
     },
     "slv_1wk_16c_2023-03-13 00-00-00.png": {
         "shape": "pnpn",
-        "trend_strength": -15.633345196308333,
-        "colored_pixels_ratio_scaled": 1.5441838581935108
+        "trend_strength": -8.927835566909897
     },
     "slv_1wk_16c_2023-03-27 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": -9.260279388407284,
-        "colored_pixels_ratio_scaled": 1.2815440264650406
+        "trend_strength": -6.085363350211484
     },
     "slv_1wk_16c_2023-04-10 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": -18.85218470637576,
-        "colored_pixels_ratio_scaled": 0.6103533453811723
+        "trend_strength": -15.633386367319622
     },
     "slv_1wk_16c_2023-04-24 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -12.960876985633332,
-        "colored_pixels_ratio_scaled": 0.5228067348050156
+        "trend_strength": -11.113529764523134
     },
     "slv_1wk_16c_2023-05-08 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": -12.495611524484293,
-        "colored_pixels_ratio_scaled": 0.902175380635028
+        "trend_strength": -10.117378875263952
     },
     "slv_1wk_16c_2023-05-22 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -12.365097492605152,
-        "colored_pixels_ratio_scaled": 0.5811711418557868
+        "trend_strength": -11.32193676377632
     },
     "slv_1wk_16c_2023-06-05 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -33.470740793598225,
-        "colored_pixels_ratio_scaled": 0.8438109735842569
+        "trend_strength": -28.65608238107732
     },
     "slv_1wk_16c_2023-06-19 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -14.139138529781816,
-        "colored_pixels_ratio_scaled": 0.7270821594827146
+        "trend_strength": -11.623082907876762
     },
     "slv_1wk_16c_2023-07-03 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": -11.778447899107478,
-        "colored_pixels_ratio_scaled": 1.6900948758204386
+        "trend_strength": -6.7628354419342465
     },
     "slv_1wk_16c_2023-07-17 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": -13.204370972276065,
-        "colored_pixels_ratio_scaled": 1.9527347075489088
+        "trend_strength": -7.8531629807841945
     },
     "slv_1wk_16c_2023-07-31 00-00-00.png": {
         "shape": "npnn",
-        "trend_strength": 40.164888952317874,
-        "colored_pixels_ratio_scaled": 1.6900948758204386
+        "trend_strength": 26.13656209443187
     },
     "slv_1wk_16c_2023-08-14 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 66.63898557385598,
-        "colored_pixels_ratio_scaled": 1.9527347075489088
+        "trend_strength": 41.56147834130768
     },
     "slv_1wk_16c_2023-08-28 00-00-00.png": {
         "shape": "nnpp",
-        "trend_strength": 0.0,
-        "colored_pixels_ratio_scaled": 2.886565220361247
+        "trend_strength": 0.0
     },
     "slv_1wk_16c_2023-09-11 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 3.4142374746332282,
-        "colored_pixels_ratio_scaled": 2.974111830937404
+        "trend_strength": 1.6310025182959427
     },
     "slv_1wk_16c_2023-09-25 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 44.77393867764242,
-        "colored_pixels_ratio_scaled": 2.7406542027343193
+        "trend_strength": 22.972805204623
     },
     "slv_1wk_16c_2023-10-09 00-00-00.png": {
         "shape": "nnnn",
-        "trend_strength": 1.3738997214005724,
-        "colored_pixels_ratio_scaled": 1.106450805312727
+        "trend_strength": 1.0666632439045707
     },
     "slv_1wk_16c_2023-10-23 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": -2.7477994428011447,
-        "colored_pixels_ratio_scaled": 1.3399084335158116
+        "trend_strength": -2.0514254709097046
     },
     "slv_1wk_16c_2023-11-06 00-00-00.png": {
         "shape": "npnn",
-        "trend_strength": 40.395368891664255,
-        "colored_pixels_ratio_scaled": 1.3399084335158116
+        "trend_strength": 28.40390885612383
     },
     "slv_1wk_16c_2023-11-20 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": -12.960876985633332,
-        "colored_pixels_ratio_scaled": 2.040281318125065
+        "trend_strength": -7.995214724559057
     },
     "slv_1wk_16c_2023-12-04 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": 3.6011920833480175,
-        "colored_pixels_ratio_scaled": 2.040281318125065
+        "trend_strength": 2.2687960745743165
     },
     "slv_1wk_16c_2023-12-18 00-00-00.png": {
         "shape": "npnp",
-        "trend_strength": -6.533233879789801,
-        "colored_pixels_ratio_scaled": 2.0986457251758366
+        "trend_strength": -4.260772737225829
     },
     "slv_1wk_16c_2024-01-01 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": 0.0,
-        "colored_pixels_ratio_scaled": 2.157010132226608
+        "trend_strength": 0.0
     },
     "slv_1wk_16c_2024-01-15 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": -17.877876163029676,
-        "colored_pixels_ratio_scaled": 1.7776414863965952
+        "trend_strength": -12.002406307813128
     },
     "slv_1wk_16c_2024-01-29 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": 0.0,
-        "colored_pixels_ratio_scaled": 3.4118448838181874
+        "trend_strength": 0.0
     },
     "slv_1wk_16c_2024-02-12 00-00-00.png": {
         "shape": "pnpn",
-        "trend_strength": 4.630139694203642,
-        "colored_pixels_ratio_scaled": 3.5869381049705007
+        "trend_strength": 2.1777180794153046
     },
     "slv_1wk_16c_2024-02-26 00-00-00.png": {
         "shape": "pnpn",
-        "trend_strength": -21.27570202250705,
-        "colored_pixels_ratio_scaled": 3.3242982732420305
+        "trend_strength": -10.129021551545662
     },
     "slv_1wk_16c_2024-03-11 00-00-00.png": {
         "shape": "nppn",
-        "trend_strength": -7.202954093537245,
-        "colored_pixels_ratio_scaled": 2.79901860978509
+        "trend_strength": -3.4108932332828013
     },
     "slv_1wk_16c_2024-03-25 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -42.140708098569945,
-        "colored_pixels_ratio_scaled": 1.6609126722950531
+        "trend_strength": -27.362276730584536
     },
     "slv_1wk_16c_2024-04-08 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -35.347846324454544,
-        "colored_pixels_ratio_scaled": -0.32347716743116606
+        "trend_strength": -38.63163394236497
     },
     "slv_1wk_16c_2024-04-22 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -46.71259052761946,
-        "colored_pixels_ratio_scaled": -0.5569347956342507
+        "trend_strength": -58.69601678150567
     },
     "slv_1wk_16c_2024-05-06 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -66.94148158719645,
-        "colored_pixels_ratio_scaled": -0.32347716743116606
+        "trend_strength": -77.28954790781997
     },
     "slv_1wk_16c_2024-05-20 00-00-00.png": {
         "shape": "pppp",
-        "trend_strength": -88.29476494505118,
-        "colored_pixels_ratio_scaled": -0.2359305568550094
+        "trend_strength": -110.92907196289401
     },
     "slv_1wk_16c_2024-06-03 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -68.35817786481475,
-        "colored_pixels_ratio_scaled": 0.11425588544961751
+        "trend_strength": -76.3309178562501
     },
     "slv_1wk_16c_2024-06-17 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -66.79145150819018,
-        "colored_pixels_ratio_scaled": 0.3768957171780877
+        "trend_strength": -64.95774927873022
     },
     "slv_1wk_16c_2024-07-01 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -61.586163060220734,
-        "colored_pixels_ratio_scaled": 0.9313575841604136
+        "trend_strength": -49.1842577595218
     },
     "slv_1wk_16c_2024-07-15 00-00-00.png": {
         "shape": "pnpp",
-        "trend_strength": -41.50371858406181,
-        "colored_pixels_ratio_scaled": 1.4274550440919684
+        "trend_strength": -29.52787305633263
     },
     "slv_1wk_16c_2024-07-29 00-00-00.png": {
         "shape": "pnnp",
-        "trend_strength": 1.178261544148485,
-        "colored_pixels_ratio_scaled": 2.0110991145996797
+        "trend_strength": 0.687579493007113
     },
     "slv_1wk_16c_2024-08-12 00-00-00.png": {
         "shape": "pnnn",
-        "trend_strength": -19.347345689588295,
-        "colored_pixels_ratio_scaled": 2.478014371005849
+        "trend_strength": -10.322621998911982
     },
     "slv_1wk_16c_2024-08-26 00-00-00.png": {
         "shape": "nnpn",
-        "trend_strength": -7.839880655747762,
-        "colored_pixels_ratio_scaled": 2.886565220361247
+        "trend_strength": -4.246916565722656
     },
     "slv_1wk_16c_2024-09-09 00-00-00.png": {
         "shape": "npnn",
-        "trend_strength": 20.082444476158937,
-        "colored_pixels_ratio_scaled": 2.8282008133104757
+        "trend_strength": 11.193658662511858
     },
     "slv_1wk_16c_2024-09-23 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -25.70614384014998,
-        "colored_pixels_ratio_scaled": 2.157010132226608
+        "trend_strength": -14.860042002456415
     },
     "slv_1wk_16c_2024-10-07 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -24.262831935540273,
-        "colored_pixels_ratio_scaled": 1.8943703004981376
+        "trend_strength": -15.253114807033468
     },
     "slv_1wk_16c_2024-10-21 00-00-00.png": {
         "shape": "nppp",
-        "trend_strength": -25.437763003134652,
-        "colored_pixels_ratio_scaled": 0.9897219912111848
+        "trend_strength": -20.155901709294227
     },
     "slv_1wk_16c_2024-11-04 00-00-00.png": {
         "shape": "ppnp",
-        "trend_strength": -31.27106258470563,
-        "colored_pixels_ratio_scaled": 1.1648152123634983
+        "trend_strength": -25.719442088170993
     }
 }
