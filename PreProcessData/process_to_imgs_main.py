@@ -13,7 +13,8 @@ def process_data_into_images(csv_file, ticker, timeframe, window_size=56, height
                              regression_folder='data_processed_imgs', 
                              overlap=23, blur=False, blur_radius=0, 
                              draw_regression_lines=True,
-                             color_candles=True):
+                             color_candles=True,
+                             create_regression_labels=True):
     """Process all data in the CSV file into candlestick images with specified window size and overlap."""
     data = load_data(csv_file)
   
@@ -57,17 +58,20 @@ def process_data_into_images(csv_file, ticker, timeframe, window_size=56, height
             "price_change": price_change,
             "colored_pixels_ratio":colored_pixels_ratio
         }
+    #regression lables are only allowed if blur is false 
+    #this is do because later we feed the resnet train model with blured images but 
+    #want to use proper lables
+    if(create_regression_labels and not blur):
+        # Save the regression data to a JSON file
+        if not os.path.exists(regression_folder):
+            os.makedirs(regression_folder)
 
-    # Save the regression data to a JSON file
-    if not os.path.exists(regression_folder):
-        os.makedirs(regression_folder)
-
-    regression_file = os.path.join(regression_folder, f"{ticker}_{timeframe}_regression_data.json")
-    with open(regression_file, 'w') as json_file:
-        json.dump(regression_data, json_file, indent=4)
-    print(f"Regression data saved to '{regression_file}'")
-    normalized_json = normalize_json(regression_file)
-    print(f"Normalized regression data saved to '{normalized_json}'")
+        regression_file = os.path.join(regression_folder, f"{ticker}_{timeframe}_regression_data.json")
+        with open(regression_file, 'w') as json_file:
+            json.dump(regression_data, json_file, indent=4)
+        print(f"Regression data saved to '{regression_file}'")
+        normalized_json = normalize_json(regression_file)
+        print(f"Normalized regression data saved to '{normalized_json}'")
 
 
 
@@ -95,10 +99,11 @@ if __name__ == "__main__":
     regression_folder = os.path.join('data_processed_imgs', ticker, timeframe, 'regression_data')
     window_size = 16           # Number of candlesticks per image
     height = 64                # Image height in pixels 
-    overlap = 14               # Number of overlapping candlesticks between consecutive windows    
-    blur = False                # Apply blur for natural mammalian vision effect
-    blur_radius = 1
+    overlap = 15               # Number of overlapping candlesticks between consecutive windows    
+    blur = True                # Apply blur for natural mammalian vision effect
+    blur_radius = 1.25
     draw_regression_lines = False
     color_candles = True
+    create_regression_labels = False
     # Process the data and generate images
-    process_data_into_images(csv_file, ticker, timeframe, window_size, height, output_folder, regression_folder, overlap, blur, blur_radius, draw_regression_lines, color_candles=color_candles)
+    process_data_into_images(csv_file, ticker, timeframe, window_size, height, output_folder, regression_folder, overlap, blur, blur_radius, draw_regression_lines, color_candles=color_candles,create_regression_labels=create_regression_labels)

@@ -77,11 +77,19 @@ class ImageViewerApp:
 # Run the app
 if __name__ == "__main__":
     # Ask for JSON file and images directory
+    
+   
+    ticker = input("Enter the ticker symbol: ")
+    timeframe = input("Enter the timeframe (e.g., '1d'): ")
+
+    base_dir = os.path.join('data_processed_imgs', ticker, timeframe)
+    json_file = os.path.join(base_dir, 'regression_data', f'{ticker}_{timeframe}_regression_data_normalized.json')
+    images_dir = os.path.join(base_dir,'images')
     root = Tk()
-    root.withdraw()
-    json_file = filedialog.askopenfilename(title="Select JSON File", filetypes=[("JSON Files", "*.json")])
-    images_dir = filedialog.askdirectory(title="Select Images Directory")
-    root.deiconify()
+    #root.withdraw()
+   # json_file = filedialog.askopenfilename(title="Select JSON File", filetypes=[("JSON Files", "*.json")])
+   # images_dir = filedialog.askdirectory(title="Select Images Directory")
+    #root.deiconify()
 
     if json_file and images_dir:
         app = ImageViewerApp(root, json_file, images_dir)

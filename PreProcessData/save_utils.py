@@ -5,5 +5,5 @@ def save_candlestick_image(image, ticker, timeframe, window_size, end_date, outp
     filename = f"{ticker}_{timeframe}_{window_size}c_{end_date}.png"
     filepath = os.path.join(output_folder, filename)
     image.save(filepath)
-    print(f"Saved: {filepath}")
+    #print(f"Saved: {filepath}")
     return filename

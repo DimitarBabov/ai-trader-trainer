@@ -15,7 +15,7 @@ image_paths = [os.path.join(image_folder, img) for img in os.listdir(image_folde
 features = np.load("RESNET clasifier/features.npy")
 
 # Perform K-means clustering
-kmeans = KMeans(n_clusters=30, random_state=42)  # Set n_clusters based on expected patterns
+kmeans = KMeans(n_clusters=20, random_state=42)  # Set n_clusters based on expected patterns
 labels = kmeans.fit_predict(features)
 
 # Display cluster labels for each image
