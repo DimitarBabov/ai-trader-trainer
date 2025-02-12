@@ -1,3 +1,11 @@
+PreProcessData crunches csv HOLC into candlestick images and labels the data based on 
+three regression lines and standard deviation. It normalized all so it can be used for 
+diverse datasets/timeframes. 
+
+RESNET feature extractor is a resnet18 trained on the labels across different timeframes. 
+
+
+
 1. process csv to images
 PreProcessData/main.py
 
