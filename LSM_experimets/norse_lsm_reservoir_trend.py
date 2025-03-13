@@ -18,7 +18,6 @@ class LSMReservoir:
         input_size: dimension of input (2 channels: positive and negative trends)
         """
         self.n_neurons = n_neurons
-        self.n_outputs = 2
         
         # LIF neuron parameters
         tau_mem = 0.250
@@ -31,49 +30,50 @@ class LSMReservoir:
             alpha=torch.tensor(50.0)
         )
         
-        # Output neuron parameters
-        self.p_out = norse.LIFParameters(
-            tau_mem_inv=torch.tensor(1/tau_mem),
-            v_leak=torch.tensor(0.0),
-            v_th=torch.tensor(0.1),
-            v_reset=torch.tensor(0.0),
-            method="super",
-            alpha=torch.tensor(50.0)
-        )
-        
         # Create neurons
         self.neurons = [norse.LIFCell(self.p) for _ in range(n_neurons)]
-        self.output_neurons = [norse.LIFCell(self.p_out) for _ in range(self.n_outputs)]
         
         # Initialize weights with log-normal distribution
         self.reservoir_weights = self._initialize_weights(n_neurons, n_neurons, connectivity, scale=0.3)
         self.input_weights = self._initialize_weights(input_size, n_neurons, 0.9, scale=0.5)  # Higher input connectivity
-        self.output_weights = self._initialize_weights(n_neurons, self.n_outputs, 0.8, scale=0.4)
         
         # Initialize neuron states
         self.states = [None] * n_neurons
-        self.output_states = [None] * self.n_outputs
         
         # Storage for activity metrics
         self.activity_history = []
         self.active_neuron_count = []
         
         # Print initialization summary
-        print(f"LSM Reservoir initialized:")
+        print(f"LSM Reservoir initialized with log-normal weights:")
         print(f"- {n_neurons} neurons with {connectivity:.1%} connectivity")
         print(f"- Input weights: shape={self.input_weights.shape}, mean={torch.mean(self.input_weights):.4f}")
+        
+        # Print sum of weights for each input channel
+        for i in range(input_size):
+            channel_sum = torch.sum(self.input_weights[i]).item()
+            print(f"  - Channel {i} weight sum: {channel_sum:.4f}")
+        
         print(f"- Reservoir weights: shape={self.reservoir_weights.shape}, mean={torch.mean(self.reservoir_weights):.4f}")
-        print(f"- Output weights: shape={self.output_weights.shape}, mean={torch.mean(self.output_weights):.4f}")
     
     def _initialize_weights(self, rows, cols, density, scale=0.3):
-        """Initialize weights with log-normal distribution"""
+        """
+        Initialize weights with log-normal distribution
+        
+        Parameters:
+        - rows, cols: dimensions of the weight matrix
+        - density: probability of connection between neurons
+        - scale: scaling factor for the weights
+        
+        Returns:
+        - weights: tensor of shape (rows, cols) with log-normal weights
+        """
         # Create connectivity mask
-        mask = random(rows, cols, density=density)
-        mask = torch.tensor(mask.toarray(), dtype=torch.float32)
+        mask = torch.rand(rows, cols) < density
         
         # Generate log-normal weights
         mu, sigma = -0.5, 0.5  # Parameters for log-normal distribution
-        weights = torch.exp(torch.randn(rows, cols, dtype=torch.float32) * sigma + mu)
+        weights = torch.exp(torch.randn(rows, cols) * sigma + mu)
         
         # Scale weights
         weights = weights * scale / weights.mean()
@@ -90,13 +90,16 @@ class LSMReservoir:
     def reset_states(self):
         """Reset all neuron states"""
         self.states = [None] * self.n_neurons
-        self.output_states = [None] * self.n_outputs
     
     def simulate(self, input_spikes, record_interval=20):
         """
         Simulate reservoir with input
         input_spikes: tensor of shape (timesteps, input_size)
         record_interval: store activity metrics every record_interval steps
+        
+        Returns:
+        - reservoir_spikes_history: tensor of shape (timesteps, n_neurons)
+        - membrane_history: tensor of shape (timesteps, n_neurons)
         """
         print(f"Starting simulation with input shape: {input_spikes.shape}")
         timesteps = input_spikes.shape[0]
@@ -104,8 +107,6 @@ class LSMReservoir:
         # Storage for spikes and membrane potentials
         reservoir_spikes_history = torch.zeros(timesteps, self.n_neurons)
         membrane_history = torch.zeros(timesteps, self.n_neurons)
-        output_spikes_history = torch.zeros(timesteps, self.n_outputs)
-        output_membrane_history = torch.zeros(timesteps, self.n_outputs)
         
         # Clear activity history
         self.activity_history = []
@@ -129,27 +130,13 @@ class LSMReservoir:
             
             reservoir_spikes_history[t] = reservoir_spikes
             
-            # Process output neurons
-            output_current = torch.matmul(reservoir_spikes, self.output_weights)
-            output_spikes = torch.zeros(self.n_outputs)
-            
-            for i in range(self.n_outputs):
-                out, self.output_states[i] = self.output_neurons[i](
-                    torch.tensor([output_current[i]]), 
-                    self.output_states[i]
-                )
-                output_spikes[i] = 1.0 if out.item() > 0 else 0.0
-                output_membrane_history[t, i] = self.output_states[i].v.item() if self.output_states[i] is not None else 0.0
-            
-            output_spikes_history[t] = output_spikes
-            
             # Record activity metrics
             if t % record_interval == 0:
                 self.activity_history.append(torch.mean(reservoir_spikes).item())
                 self.active_neuron_count.append(torch.sum(reservoir_spikes > 0).item())
         
         print("Simulation completed")
-        return reservoir_spikes_history, membrane_history, output_spikes_history, output_membrane_history
+        return reservoir_spikes_history, membrane_history
     
     def visualize_weights(self):
         """Visualize weight matrices and distributions"""
@@ -159,7 +146,7 @@ class LSMReservoir:
         # Plot reservoir weight matrix
         plt.subplot(2, 2, 1)
         sns.heatmap(self.reservoir_weights, cmap='viridis', 
-                   vmin=0, vmax=max(1.0, torch.max(self.reservoir_weights).item()))
+                   vmin=0, vmax=max(0.3, torch.max(self.reservoir_weights).item()))
         plt.title('Reservoir Weight Matrix')
         plt.xlabel('Post-synaptic Neuron')
         plt.ylabel('Pre-synaptic Neuron')
@@ -169,15 +156,21 @@ class LSMReservoir:
         non_zero_weights = weights[weights > 0.01]  # Exclude near-zero weights
         
         plt.subplot(2, 2, 2)
-        sns.histplot(data=non_zero_weights, bins=20, kde=True)
-        plt.title('Reservoir Weight Distribution')
+        sns.histplot(data=non_zero_weights, bins=30, kde=True)
+        plt.title('Reservoir Weight Distribution (Log-Normal)')
         plt.xlabel('Weight Value')
         plt.ylabel('Count')
+        
+        # Add statistics
+        if len(non_zero_weights) > 0:
+            plt.text(0.05, 0.95, 
+                    f"Mean: {np.mean(non_zero_weights):.3f}\nStd: {np.std(non_zero_weights):.3f}\nMax: {np.max(non_zero_weights):.3f}", 
+                    transform=plt.gca().transAxes, verticalalignment='top')
         
         # Plot input weight matrix
         plt.subplot(2, 2, 3)
         sns.heatmap(self.input_weights.detach().numpy(), cmap='viridis',
-                   vmin=0, vmax=max(1.0, torch.max(self.input_weights).item()))
+                   vmin=0, vmax=max(0.5, torch.max(self.input_weights).item()))
         plt.title('Input Weights')
         plt.xlabel('Reservoir Neuron')
         plt.ylabel('Input Channel')
@@ -187,10 +180,20 @@ class LSMReservoir:
         non_zero_input = input_weights_flat[input_weights_flat > 0.01]
         
         plt.subplot(2, 2, 4)
-        sns.histplot(data=non_zero_input, bins=20, kde=True)
-        plt.title('Input Weight Distribution')
+        sns.histplot(data=non_zero_input, bins=30, kde=True)
+        plt.title('Input Weight Distribution (Log-Normal)')
         plt.xlabel('Weight Value')
         plt.ylabel('Count')
+        
+        # Add statistics including channel sums
+        if len(non_zero_input) > 0:
+            channel_sums = [torch.sum(self.input_weights[i]).item() for i in range(self.input_weights.shape[0])]
+            stats_text = f"Mean: {np.mean(non_zero_input):.3f}\nStd: {np.std(non_zero_input):.3f}\nMax: {np.max(non_zero_input):.3f}"
+            
+            for i, sum_val in enumerate(channel_sums):
+                stats_text += f"\nChannel {i} sum: {sum_val:.3f}"
+                
+            plt.text(0.05, 0.95, stats_text, transform=plt.gca().transAxes, verticalalignment='top')
         
         plt.tight_layout()
         plt.show()
@@ -239,7 +242,7 @@ if __name__ == "__main__":
     input_spikes = torch.zeros(timesteps, 2)  # Two channels: [positive_trend, negative_trend]
     
     # Parameters for spike probability conversion
-    trend_threshold = 80  # Base threshold
+    trend_threshold = 100  # Base threshold
     
     # Generate spikes based on continuous probabilities
     strong_trend_days = 0
@@ -269,10 +272,12 @@ if __name__ == "__main__":
     
     # Create and simulate reservoir
     print("\nCreating reservoir...")
-    reservoir = LSMReservoir(n_neurons=64, connectivity=0.5)
+    reservoir = LSMReservoir(n_neurons=128, connectivity=0.5)
+    
+
     
     print("Simulating reservoir...")
-    reservoir_spikes, membranes, output_spikes, output_membranes = reservoir.simulate(input_spikes)
+    reservoir_spikes, membranes = reservoir.simulate(input_spikes)
     
     # Visualize results
     plt.figure(figsize=(15, 12))
@@ -308,13 +313,17 @@ if __name__ == "__main__":
     plt.legend()
     plt.grid(True)
     
-    # Plot 4: Output spike trains
+    # Plot 4: Membrane potentials (sample of neurons)
     plt.subplot(4, 1, 4)
-    plt.plot(output_spikes[:, 0].numpy(), label='Output 1', alpha=0.7)
-    plt.plot(output_spikes[:, 1].numpy(), label='Output 2', alpha=0.7)
-    plt.title('Output Spike Trains')
+    # Select a few random neurons to display
+    np.random.seed(42)  # For reproducibility
+    sample_neurons = np.random.choice(range(reservoir.n_neurons), size=3, replace=False)
+    for idx, neuron_idx in enumerate(sample_neurons):
+        plt.plot(membranes[:, neuron_idx].numpy(), 
+                label=f'Neuron #{neuron_idx}', alpha=0.7)
+    plt.title('Reservoir Membrane Potentials (Sample Neurons)')
     plt.xlabel('Time (days)')
-    plt.ylabel('Spike Value')
+    plt.ylabel('Membrane Potential')
     plt.legend()
     plt.grid(True)
     
@@ -329,49 +338,30 @@ if __name__ == "__main__":
     reservoir.visualize_activity()
     
     # Print output statistics
-    print("\nOutput Statistics:")
-    print(f"Output 1 spike rate: {torch.mean(output_spikes[:, 0]):.4f}")
-    print(f"Output 2 spike rate: {torch.mean(output_spikes[:, 1]):.4f}")
-    print(f"Total output 1 spikes: {torch.sum(output_spikes[:, 0])}")
-    print(f"Total output 2 spikes: {torch.sum(output_spikes[:, 1])}")
+    print("\nReservoir Statistics (128 neurons):")
+    print(f"Total input spikes: {torch.sum(input_spikes)}")
+    print(f"Total reservoir spikes: {torch.sum(reservoir_spikes)}")
+    print(f"Mean reservoir activity: {torch.mean(reservoir_spikes):.4f}")
+    print(f"Mean membrane potential: {torch.mean(membranes):.4f}")
     
-    # Save daily trend values and output spikes to a text file
-    print("\nSaving daily trend values and output spikes to a text file...")
+    # Calculate activity per neuron
+    spikes_per_neuron = torch.sum(reservoir_spikes) / reservoir.n_neurons
+    print(f"Average spikes per neuron: {spikes_per_neuron:.2f}")
     
-    # Create output directory if it doesn't exist
-    output_dir = "LSM_experimets/results"
-    os.makedirs(output_dir, exist_ok=True)
+    # Print input channel weight sums
+    print("\nInput Channel Weight Sums:")
+    for i in range(reservoir.input_weights.shape[0]):
+        channel_sum = torch.sum(reservoir.input_weights[i]).item()
+        print(f"Channel {i} weight sum: {channel_sum:.4f}")
     
-    # Generate filename with timestamp
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_file = f"{output_dir}/daily_trends_and_spikes_{timestamp}.txt"
+    # Calculate neuron activity statistics
+    neuron_spike_counts = torch.sum(reservoir_spikes, dim=0)
+    most_active_neuron = torch.argmax(neuron_spike_counts).item()
+    least_active_neuron = torch.argmin(neuron_spike_counts).item()
     
-    with open(output_file, "w") as f:
-        # Write header
-        f.write("Date,Trend,Input_Spike_Pos,Input_Spike_Neg,Output_Spike_1,Output_Spike_2,Reservoir_Activity\n")
-        
-        # Write data for each day
-        for i in range(len(dates)):
-            date = dates[i]
-            trend = trends[i]
-            input_pos = input_spikes[i, 0].item()
-            input_neg = input_spikes[i, 1].item()
-            output_1 = output_spikes[i, 0].item()
-            output_2 = output_spikes[i, 1].item()
-            res_activity = mean_activity[i].item()
-            
-            f.write(f"{date},{trend:.2f},{input_pos:.0f},{input_neg:.0f},{output_1:.0f},{output_2:.0f},{res_activity:.4f}\n")
-    
-    print(f"Data saved to {output_file}")
-    
-    # Additional analysis: Count days with output spikes
-    days_with_output_1 = torch.sum(output_spikes[:, 0] > 0).item()
-    days_with_output_2 = torch.sum(output_spikes[:, 1] > 0).item()
-    days_with_any_output = torch.sum(torch.max(output_spikes, dim=1)[0] > 0).item()
-    days_with_both_outputs = torch.sum(torch.min(output_spikes, dim=1)[0] > 0).item()
-    
-    print("\nOutput Spike Analysis:")
-    print(f"Days with Output 1 spikes: {days_with_output_1} ({days_with_output_1/timesteps*100:.2f}%)")
-    print(f"Days with Output 2 spikes: {days_with_output_2} ({days_with_output_2/timesteps*100:.2f}%)")
-    print(f"Days with any output spike: {days_with_any_output} ({days_with_any_output/timesteps*100:.2f}%)")
-    print(f"Days with both outputs spiking: {days_with_both_outputs} ({days_with_both_outputs/timesteps*100:.2f}%)") 
+    print(f"\nNeuron Activity Analysis:")
+    print(f"Most active neuron: #{most_active_neuron} with {neuron_spike_counts[most_active_neuron]} spikes")
+    print(f"Least active neuron: #{least_active_neuron} with {neuron_spike_counts[least_active_neuron]} spikes")
+    print(f"Neurons with zero spikes: {torch.sum(neuron_spike_counts == 0).item()} out of {reservoir.n_neurons}")
+    print(f"Percentage of active neurons: {(1 - torch.sum(neuron_spike_counts == 0).item() / reservoir.n_neurons) * 100:.2f}%")
+    print(f"Average spikes per neuron: {torch.mean(neuron_spike_counts):.2f}") 
