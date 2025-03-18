@@ -1,3 +1,46 @@
+"""
+Basic Leaky Integrate-and-Fire (LIF) Neuron Simulation
+======================================================
+
+This script implements a basic Leaky Integrate-and-Fire (LIF) neuron using the Norse library
+for spiking neural networks. It demonstrates the fundamental behavior of a LIF neuron
+without synaptic plasticity.
+
+Key Features:
+------------
+1. Single LIF neuron: Implements a single spiking neuron with configurable parameters
+   such as membrane time constant, threshold, and reset potential.
+
+2. Random spike input: Generates a random spike train with varying intervals to
+   stimulate the neuron.
+
+3. Fixed synaptic weight: Uses a constant weight (no plasticity) to demonstrate
+   the basic input-output relationship of the neuron.
+
+4. Detailed visualization: Plots membrane potential, input spikes, and output spikes
+   to illustrate the neuron's dynamics.
+
+Usage:
+------
+Run this script to observe how a LIF neuron responds to random spike input with
+a fixed synaptic weight. The visualization shows the membrane potential evolution
+and the relationship between input and output spikes.
+
+Implementation Details:
+----------------------
+- LIF parameters: Configurable parameters for the neuron model
+- Simulation loop: Processes input spikes and updates neuron state
+- Visualization: Plots membrane potential and spike events
+- Statistics: Calculates and displays spike statistics
+
+Dependencies:
+------------
+- torch: For tensor operations
+- norse: For spiking neural network implementation
+- numpy: For numerical operations
+- matplotlib: For visualization
+"""
+
 import torch
 import torch.nn as nn
 import norse.torch as norse

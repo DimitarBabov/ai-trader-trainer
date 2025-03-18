@@ -1,3 +1,50 @@
+"""
+LIF Neuron with Spike-Timing-Dependent Plasticity (STDP)
+=======================================================
+
+This script implements a Leaky Integrate-and-Fire (LIF) neuron with Spike-Timing-Dependent
+Plasticity (STDP) using the Norse library. It demonstrates how synaptic weights change
+based on the relative timing of pre- and post-synaptic spikes.
+
+Key Features:
+------------
+1. Single LIF neuron: Implements a single spiking neuron with configurable parameters
+   such as membrane time constant, threshold, and reset potential.
+
+2. STDP learning rule: Implements the biologically-inspired plasticity mechanism where
+   synaptic weights are strengthened or weakened based on the timing of spikes.
+
+3. Synaptic trace model: Uses exponentially decaying traces to track pre- and post-synaptic
+   activity for implementing STDP.
+
+4. Weight evolution: Demonstrates how synaptic weights evolve over time in response to
+   the input and output spike patterns.
+
+5. Detailed visualization: Plots membrane potential, input/output spikes, and weight changes
+   to illustrate the dynamics of STDP.
+
+Usage:
+------
+Run this script to observe how STDP affects synaptic weights based on the timing of
+pre- and post-synaptic spikes. The visualization shows the membrane potential evolution,
+spike events, and the resulting weight changes over time.
+
+Implementation Details:
+----------------------
+- LIF parameters: Configurable parameters for the neuron model
+- STDP parameters: Learning rates and time constants for potentiation and depression
+- Trace variables: Pre- and post-synaptic activity traces for implementing STDP
+- Simulation loop: Processes input spikes, updates neuron state, and modifies weights
+- Visualization: Plots membrane potential, spike events, and weight evolution
+
+Dependencies:
+------------
+- torch: For tensor operations
+- norse: For spiking neural network implementation
+- numpy: For numerical operations
+- matplotlib: For visualization
+"""
+
 import torch
 import torch.nn as nn
 import norse.torch as norse

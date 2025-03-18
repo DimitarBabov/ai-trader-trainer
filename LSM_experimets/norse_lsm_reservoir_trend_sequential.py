@@ -1,3 +1,54 @@
+"""
+Liquid State Machine (LSM) Reservoir for Market Trend Analysis
+=============================================================
+
+This script implements a Liquid State Machine (LSM) reservoir using spiking neural networks
+with the Norse library to process and analyze market trend data.
+
+Key Features:
+------------
+1. Log-normal weight distribution: Creates a biologically plausible network with a few strong
+   connections and many weak ones, following the distribution observed in real neural circuits.
+
+2. Dual-channel input processing: Processes positive and negative market trends separately,
+   with input channel normalization to ensure balanced influence.
+
+3. Spiking neural dynamics: Uses Leaky Integrate-and-Fire (LIF) neurons to process temporal
+   patterns in market data through spike-based computation.
+
+4. Comprehensive visualization: Provides detailed visualizations of weight distributions,
+   network activity, and membrane potentials.
+
+5. Detailed statistics: Calculates and reports various metrics about neuron activity,
+   spike rates, and network behavior.
+
+Usage:
+------
+The script loads market trend data from a JSON file, converts trends into spike trains,
+and processes them through the LSM reservoir. It then visualizes the results and
+provides statistics about the network's behavior.
+
+The LSM can be used as a feature extractor for market data, with the reservoir state
+serving as input to downstream models like transformers or other machine learning algorithms.
+
+Implementation Details:
+----------------------
+- LSMReservoir class: Main implementation of the reservoir with methods for initialization,
+  simulation, and visualization.
+- Weight initialization: Uses log-normal distribution for weights with configurable parameters.
+- Simulation: Processes input spikes through the reservoir and records spike history and
+  membrane potentials.
+- Visualization: Provides multiple visualizations of weights, activity, and network behavior.
+
+Dependencies:
+------------
+- torch: For tensor operations and neural network components
+- norse: For spiking neural network implementation
+- numpy: For numerical operations
+- matplotlib & seaborn: For visualization
+- json: For loading market data
+"""
+
 import torch
 import torch.nn as nn
 import norse.torch as norse
@@ -8,6 +59,7 @@ import seaborn as sns
 import json
 import os
 from datetime import datetime
+from PIL import Image
 
 class LSMReservoir:
     def __init__(self, n_neurons=64, connectivity=0.5, input_size=2):
@@ -40,9 +92,10 @@ class LSMReservoir:
         # Initialize neuron states
         self.states = [None] * n_neurons
         
-        # Storage for activity metrics
+        # Storage for activity metrics and daily states
         self.activity_history = []
         self.active_neuron_count = []
+        self.daily_states = {}  # Will store {date: state_dict} pairs
         
         # Print initialization summary
         print(f"LSM Reservoir initialized with log-normal weights:")
@@ -91,10 +144,36 @@ class LSMReservoir:
         """Reset all neuron states"""
         self.states = [None] * self.n_neurons
     
-    def simulate(self, input_spikes, record_interval=20):
+    def save_state_as_image(self, state, date, output_dir):
+        """Save neuron state as a 10x10 grayscale image
+        
+        Parameters:
+        - state: membrane potentials or spikes
+        - date: date string for the filename
+        - output_dir: directory to save the image
         """
-        Simulate reservoir with input
+        # Ensure output directory exists
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Reshape state to 10x10
+        state_2d = state.reshape(10, 10)
+        
+        # Normalize to [0, 255] for grayscale
+        state_normalized = ((state_2d - state_2d.min()) / (state_2d.max() - state_2d.min()) * 255).numpy()
+        
+        # Convert to uint8
+        img_data = state_normalized.astype(np.uint8)
+        
+        # Create image and save
+        img = Image.fromarray(img_data, mode='L')
+        filename = f"state_{date}.png"
+        img.save(os.path.join(output_dir, filename))
+    
+    def simulate(self, input_spikes, dates, record_interval=20):
+        """
+        Simulate reservoir with input using sequential processing
         input_spikes: tensor of shape (timesteps, input_size)
+        dates: list of dates corresponding to each timestep
         record_interval: store activity metrics every record_interval steps
         
         Returns:
@@ -108,6 +187,10 @@ class LSMReservoir:
         reservoir_spikes_history = torch.zeros(timesteps, self.n_neurons)
         membrane_history = torch.zeros(timesteps, self.n_neurons)
         
+        # Create output directory for state images
+        output_dir = "LSM_experimets/state_images"
+        os.makedirs(output_dir, exist_ok=True)
+        
         # Clear activity history
         self.activity_history = []
         self.active_neuron_count = []
@@ -120,15 +203,23 @@ class LSMReservoir:
             current_input = input_spikes[t].reshape(1, -1)
             input_current = torch.matmul(current_input, self.input_weights).squeeze()
             
-            # Process reservoir
+            # Process reservoir - sequential processing
             reservoir_spikes = torch.zeros(self.n_neurons)
+            membrane_potentials = torch.zeros(self.n_neurons)
+            
             for i in range(self.n_neurons):
+                # Sequential processing - each neuron sees spikes from neurons processed earlier in this timestep
                 total_current = input_current[i] + torch.sum(self.reservoir_weights[:, i] * reservoir_spikes)
                 out, self.states[i] = self.neurons[i](torch.tensor([total_current]), self.states[i])
                 reservoir_spikes[i] = 1.0 if out.item() > 0 else 0.0
-                membrane_history[t, i] = self.states[i].v.item() if self.states[i] is not None else 0.0
+                membrane_potentials[i] = self.states[i].v.item() if self.states[i] is not None else 0.0
             
+            # Store results for this timestep
             reservoir_spikes_history[t] = reservoir_spikes
+            membrane_history[t] = membrane_potentials
+            
+            # Save state as image
+            self.save_state_as_image(membrane_potentials, dates[t], output_dir)
             
             # Record activity metrics
             if t % record_interval == 0:
@@ -272,12 +363,19 @@ if __name__ == "__main__":
     
     # Create and simulate reservoir
     print("\nCreating reservoir...")
-    reservoir = LSMReservoir(n_neurons=128, connectivity=0.5)
-    
-
+    reservoir = LSMReservoir(n_neurons=100, connectivity=0.5)
     
     print("Simulating reservoir...")
-    reservoir_spikes, membranes = reservoir.simulate(input_spikes)
+    reservoir_spikes, membranes = reservoir.simulate(input_spikes, dates)
+    
+    # Print sample of state statistics
+    print("\nSample of state statistics:")
+    sample_date = dates[0]
+    print(f"State for {sample_date}:")
+    print(f"- Trend: {trends[0]:.2f}")
+    print(f"- Membrane potentials (mean): {torch.mean(membranes[0]):.4f}")
+    print(f"- Active neurons: {torch.sum(reservoir_spikes[0])}")
+    print(f"- Input spikes: {input_spikes[0].tolist()}")
     
     # Visualize results
     plt.figure(figsize=(15, 12))
@@ -338,7 +436,7 @@ if __name__ == "__main__":
     reservoir.visualize_activity()
     
     # Print output statistics
-    print("\nReservoir Statistics (128 neurons):")
+    print("\nReservoir Statistics (100 neurons):")
     print(f"Total input spikes: {torch.sum(input_spikes)}")
     print(f"Total reservoir spikes: {torch.sum(reservoir_spikes)}")
     print(f"Mean reservoir activity: {torch.mean(reservoir_spikes):.4f}")
