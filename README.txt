@@ -27,14 +27,17 @@ This repository contains various components for developing and testing AI-based 
 - Extracts meaningful features from candlestick images
 
 ### 5. Liquid State Machine (LSM) Implementation
-- **LSM_experimets/norse_lsm_reservoir_trend.py**: LSM reservoir with log-normal weight distribution
+- **LSM_experimets/Source/network.py**: LSM reservoir with log-normal weight distribution
 - Processes market trend data using spiking neural networks
 - Features include:
   - Biologically plausible log-normal weight distribution
-  - Input channel normalization for balanced processing
+  - Balanced input weights for positive and negative trends
+  - Scalable architecture (now supporting 128 neurons)
+  - Randomized input connectivity (30% of neurons)
   - Detailed visualization and statistics
-  - Scalable architecture (64-128 neurons)
-- See LSM_experimets/README.md for detailed documentation
+- **LSM_experimets/Source/visualization.py**: Visualization tools for network activity and weights
+- **LSM_experimets/Source/main.py**: Main script to run the LSM simulation
+- See `LSM_experimets/README.md` for detailed documentation
 
 ## Workflow
 
